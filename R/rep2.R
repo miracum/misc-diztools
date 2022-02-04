@@ -21,7 +21,8 @@
 #'
 #' @param x The object to repeat
 #' @param n The amount how often the object should be repeated
-#' @inheritParams paste
+#' @param ... Further arguments passed to `paste` (see `help("paste")` for
+#'   more information).
 #'
 #' @return The result from
 #'   `paste(rep(x, n), sep = sep, collapse = collapse)`

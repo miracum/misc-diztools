@@ -32,7 +32,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.0.9001")
+my_desc$set_version("0.0.0.9002")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -105,9 +105,6 @@ usethis::use_package("parsedate", type = "Imports")
 # Suggests
 usethis::use_package("testthat", type = "Suggests")
 usethis::use_package("lintr", type = "Suggests")
-usethis::use_package("RPostgres", type = "Suggests")
-usethis::use_package("DBI", type = "Suggests", min_version = "1.1.0")
-usethis::use_package("RJDBC", type = "Suggests")
 
 
 
