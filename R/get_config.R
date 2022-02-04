@@ -38,19 +38,7 @@
 get_config <-
   function(config_file,
            config_key) {
-    logfile_dir <- Sys.getenv("DIZUTILS_LOGGING_LOGFILE_DIR")
-    if (logfile_dir == "") {
-      logfile_dir <- tempdir()
-    }
-
-    headless <- Sys.getenv("DIZUTILS_LOGGING_HEADLESS")
-    if (headless == "TRUE") {
-      headless <- TRUE
-    } else if (headless == "FALSE") {
-      headless <- FALSE
-    } else {
-      headless <- TRUE
-    }
+    DIZtools::set_log_options()
 
     res <- tryCatch({
       config::get(value = config_key, file = config_file)
@@ -61,8 +49,8 @@ get_config <-
         print_this = paste0("Cannot access config_file. ", cond),
         type = "Error",
         findme = "e3e1b9c5f9",
-        logfile_dir = logfile_dir,
-        headless = headless
+        logfile_dir = options()[["diztools.log.logfile_dir"]],
+        headless = options()[["diztools.log.headless"]]
       )
       return(NULL)
     },
@@ -72,8 +60,8 @@ get_config <-
         print_this = paste0("Cannot access config_file. ", cond),
         type = "Warning",
         findme = "718e0f3d88",
-        logfile_dir = logfile_dir,
-        headless = headless
+        logfile_dir = options()[["diztools.log.logfile_dir"]],
+        headless = options()[["diztools.log.headless"]]
       )
       return(NULL)
     })

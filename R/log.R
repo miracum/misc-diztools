@@ -22,7 +22,8 @@
 #'   The function can be used to select the output (console, ui, logfile).
 #'   If no output is selected, the print_this string will be printed to the
 #'   console and to logfile.
-#'   One of these must be a string with length > 0: print_me, console, ui
+#'   One of these must be a string with length > 0: print_me, console, ui.
+#'   Default parameters can be set using the function
 #' @param print_this (Optional, String, default: "")
 #' @param type (Optional, String, default: "Info")
 #'   E.g. "Warning", "Error". Default: "Info"
@@ -68,17 +69,45 @@
 #' @export
 #'
 feedback <-
-  function(print_this = "",
-           type = "Info",
-           ui = FALSE,
-           console = TRUE,
-           logfile = TRUE,
-           logjs = FALSE,
-           prefix = "",
-           suffix = "",
-           findme = "",
-           logfile_dir = tempdir(),
-           headless = TRUE) {
+  function(print_this = NULL,
+           type = NULL,
+           ui = NULL,
+           console = NULL,
+           logfile = NULL,
+           logjs = NULL,
+           prefix = NULL,
+           suffix = NULL,
+           findme = NULL,
+           logfile_dir = NULL,
+           headless = NULL) {
+    log_set_defaults()
+
+    ## If a parameter was supplied to the function, this one will be used,
+    ## otherwise the values from `options()` will be used:
+    print_this <-
+      ifelse(is.null(print_this), options()[["diztools.log.print_this"]],
+             print_this)
+    type <-
+      ifelse(is.null(type), options()[["diztools.log.type"]], type)
+    ui <- ifelse(is.null(ui), options()[["diztools.log.ui"]], ui)
+    console <-
+      ifelse(is.null(console), options()[["diztools.log.console"]], console)
+    logfile <-
+      ifelse(is.null(logfile), options()[["diztools.log.logfile"]], logfile)
+    logjs <-
+      ifelse(is.null(logjs), options()[["diztools.log.logjs"]], logjs)
+    prefix <-
+      ifelse(is.null(prefix), options()[["diztools.log.prefix"]], prefix)
+    suffix <-
+      ifelse(is.null(suffix), options()[["diztools.log.suffix"]], suffix)
+    findme <-
+      ifelse(is.null(findme), options()[["diztools.log.findme"]], findme)
+    logfile_dir <-
+      ifelse(is.null(logfile_dir), options()[["diztools.log.logfile_dir"]],
+             logfile_dir)
+    headless <-
+      ifelse(is.null(headless), options()[["diztools.log.headless"]], headless)
+
     # Make the first letter of type Uppercase:
     type <- firstup(type)
 
@@ -407,4 +436,116 @@ cleanup_old_logfile <- function(logfile_dir) {
     ## ... and create a new logfile:
     file.create(path_with_file)
   }
+}
+
+#' @title Set default options for all log-functions
+#' @description This function sets the default log options. Parameters not
+#'   supplied to this function will be set with the default value.
+#'
+#' @return No return value, called for side effects (see description)
+#' @examples
+#'   DIZtools::set_log_options()
+#'
+#' @export
+#'
+log_set_defaults <- function(print_this = NULL,
+                             type = NULL,
+                             ui = NULL,
+                             console = NULL,
+                             logfile = NULL,
+                             logjs = NULL,
+                             prefix = NULL,
+                             suffix = NULL,
+                             findme = NULL,
+                             logfile_dir = NULL,
+                             headless = NULL) {
+
+  if (isTRUE(options()[["diztools.log.__init_success"]])) {
+    ## The default settings have already been written to to the options.
+    ## Another call with  would overwrite user-changes!
+    # print("Skipping option assignment. Already done.")
+    return()
+  } else{
+    ## Assign default options:
+    options(log_get_default_options())
+
+    new_defaults <- list(
+      print_this = print_this,
+      type = type,
+      ui = ui,
+      console = console,
+      logfile = logfile,
+      logjs = logjs,
+      prefix = prefix,
+      suffix = suffix,
+      findme = findme,
+      logfile_dir = logfile_dir,
+      headless =  headless
+    )
+
+    ## Remove NULL elements:
+    new_defaults[sapply(new_defaults, is.null)] <- NULL
+
+    if (length(new_defaults) > 0) {
+      ## Add prefix:
+      names(new_defaults) <-
+        paste0("diztools.log.", names(new_defaults))
+
+      ## Assign the new options:
+      options(new_defaults)
+    } else {
+      return()
+    }
+
+    ## Further checks:
+    stopifnot(is.logical(options()[["diztools.log.headless"]]))
+
+    ## Set flag to not overwrite the settings in another call:
+    options("diztools.log.__init_success" = TRUE)
+  }
+}
+
+#' @title Get the default settings for the logging function as list.
+#' @description Get the default settings for the logging function as list
+#'
+#' @return The list with the default parameters.
+#' @examples
+#'   log_get_default_options()
+#'
+#' @export
+#'
+log_get_default_options <- function(){
+  default <- list(
+    "diztools.log.headless" = TRUE,
+    "diztools.log.type" = "Info",
+    "diztools.log.ui" = FALSE,
+    "diztools.log.console" = TRUE,
+    "diztools.log.logfile" = TRUE,
+    "diztools.log.logjs" = FALSE,
+    "diztools.log.prefix" = "",
+    "diztools.log.suffix" = "",
+    "diztools.log.findme" = "",
+    "diztools.log.logfile_dir" = tempdir(),
+    "diztools.log.headless" = TRUE
+  )
+  return(default)
+}
+
+#' @title Remove all log-related options from `options()`.
+#' @description Remove all log-related options from `options()`.
+#'
+#' @return Nothing.
+#' @examples
+#'   log_remove_options()
+#'
+#' @export
+#'
+log_remove_options <- function(){
+  options(sapply(grep(
+    pattern = "^(diztools.log.)",
+    x = names(options()),
+    value = TRUE
+  ), function(x) {
+    return(NULL)
+  }, USE.NAMES = TRUE))
 }

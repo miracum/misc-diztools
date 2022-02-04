@@ -35,6 +35,8 @@
 #' ## Result: "2021-12-31, 12:34:00"
 #' format_POSIXct(x = "2021-12-31 12:34", lang = "de")
 #' ## Result: "31.12.2021, 12:34:00"
+#' format_posixct(Sys.time())
+#' ## Result: "2022-01-01, 09:10:50"
 #' )}
 #'
 #' @export

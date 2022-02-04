@@ -6,17 +6,17 @@
   console and to the logfile.}
 \usage{
 feedback(
-  print_this = "",
-  type = "Info",
-  ui = FALSE,
-  console = TRUE,
-  logfile = TRUE,
-  logjs = FALSE,
-  prefix = "",
-  suffix = "",
-  findme = "",
-  logfile_dir = tempdir(),
-  headless = TRUE
+  print_this = NULL,
+  type = NULL,
+  ui = NULL,
+  console = NULL,
+  logfile = NULL,
+  logjs = NULL,
+  prefix = NULL,
+  suffix = NULL,
+  findme = NULL,
+  logfile_dir = NULL,
+  headless = NULL
 )
 }
 \arguments{
@@ -73,7 +73,8 @@ This function provides the functionality to publish
   The function can be used to select the output (console, ui, logfile).
   If no output is selected, the print_this string will be printed to the
   console and to logfile.
-  One of these must be a string with length > 0: print_me, console, ui
+  One of these must be a string with length > 0: print_me, console, ui.
+  Default parameters can be set using the function
 }
 \examples{
 feedback(
