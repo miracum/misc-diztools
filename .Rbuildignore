@@ -1,0 +1,13 @@
+^LICENSE\.md$
+^\.gitlab-ci\.yml$
+^data-raw$
+^\.vscode$
+^\.lintr$
+^\.spelling$
+^tic\.R$
+^\.github$
+^cran-comments\.md$
+^logfile\.log$
+^NEWS\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
