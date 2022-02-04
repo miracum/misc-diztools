@@ -1,7 +1,7 @@
 context("lints")
 
 if (dir.exists("../../00_pkg_src")) {
-  prefix <- "../../00_pkg_src/DIZutils/"
+  prefix <- "../../00_pkg_src/DIZtools/"
 } else if (dir.exists("../../R")) {
   prefix <- "../../"
 } else if (dir.exists("./R")) {

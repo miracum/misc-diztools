@@ -1,4 +1,4 @@
 library(testthat)
-library(DIZutils)
+library(DIZtools)
 
-test_check("DIZutils")
+test_check("DIZtools")
