@@ -22,15 +22,7 @@ Depends:
     R (>= 3.1.0)
 Imports: 
     config,
-    data.table,
-    Hmisc,
-    parsedate,
-    psych,
-    rapportools,
-    RJSONIO,
-    shiny,
-    shinyjs,
-    xml2
+    parsedate
 Suggests: 
     DBI (>= 1.1.0),
     lintr,

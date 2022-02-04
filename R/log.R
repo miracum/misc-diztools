@@ -549,3 +549,55 @@ log_remove_options <- function(){
     return(NULL)
   }, USE.NAMES = TRUE))
 }
+
+#' @title Internal function for debugging only.
+#' @description Internal function for debugging only.
+#'
+#' @return Nothing.
+#'
+log_internal_test <- function(){
+  print_this = NULL
+  type = NULL
+  ui = NULL
+  console = NULL
+  logfile = NULL
+  logjs = NULL
+  prefix = NULL
+  suffix = NULL
+  findme = NULL
+  logfile_dir = NULL
+  headless = NULL
+
+  new_defaults <- list(
+    print_this = print_this,
+    type = type,
+    ui = ui,
+    console = console,
+    logfile = logfile,
+    logjs = logjs,
+    prefix = prefix,
+    suffix = suffix,
+    findme = findme,
+    logfile_dir = logfile_dir,
+    headless =  headless
+  )
+
+  clear()
+  log_remove_options()
+  options()[grepl(pattern = "^(diztools)", x = names(options()))]
+
+  feedback("test")
+  feedback("test with prefix", prefix = "prefixxxx ")
+  feedback("test without prefix")
+  feedback("Setting prefix gobally now...")
+
+  options()[["diztools.log.prefix"]]
+  log_set_defaults(prefix = "global prefix - ")
+  options()[["diztools.log.prefix"]]
+
+  feedback("here should be a prefix now")
+  feedback("here should be another locally overwritten prefix now", prefix = "local prefix - ")
+  feedback("here should be the global prefix again")
+
+  options()[grepl(pattern = "^(diztools.log.)", x = names(options()))]
+}

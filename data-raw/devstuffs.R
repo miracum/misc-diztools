@@ -83,12 +83,13 @@ my_desc$write(file = "DESCRIPTION")
 usethis::use_package("R", min_version = "3.1.0", type = "Depends")
 
 ## Imports
-# usethis::use_package("config", type = "Imports")
+## For `get_config()`:
+usethis::use_package("config", type = "Imports")
 # usethis::use_package("data.table", type = "Imports")
 ## For `combine_stats`:
 # usethis::use_package("Hmisc", type = "Imports")
 ## For `format_POSIXct`:
-# usethis::use_package("parsedate", type = "Imports")
+usethis::use_package("parsedate", type = "Imports")
 ## For `combine_stats`:
 # usethis::use_package("psych", type = "Imports")
 ## For `feedback`:

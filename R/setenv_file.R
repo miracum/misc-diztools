@@ -18,6 +18,7 @@
 #'
 #' @description Internal function to set environment variables that are
 #'   necessary for the database connections with \code{db_connection}.
+#'   Old function name: `set_env_vars()`.
 #'
 #' @param env_file A character. The full path including the file name to
 #'   the file containing the environment variable definitions to be loaded.
@@ -29,7 +30,7 @@
 #'
 #' @export
 #'
-set_env_vars <- function(env_file) {
+setenv_file <- function(env_file) {
 
   envs <- readLines(env_file)
 

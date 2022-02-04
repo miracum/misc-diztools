@@ -1,4 +1,4 @@
-# DIZutils - Utilities for 'DIZ' R Package Development
+# DIZtools - Utilities for 'DIZ' R Package Development
 # Copyright (C) 2020-2022 Universitätsklinikum Erlangen, Germany
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 #'   While `var.name = "testname"; var.value = 7` and
 #'   `Sys.setenv(var.name = var.value)` will create
 #'   `var.name = 7` in the system environment,
-#'   `DIZutils::setenv2(key = var.name, val = var.value)` will create
+#'   `DIZtools::setenv2(key = var.name, val = var.value)` will create
 #'   `testname = 7` in the system environment.
 #'
 #' @param key A character (!) string. The name of the assigned variable
@@ -30,17 +30,17 @@
 #' @examples
 #'   var.name = "testname"
 #'   var.value = 7
-#'   
+#'
 #'   Sys.setenv(var.name = var.value)
-#'   
+#'
 #'   Sys.getenv("testname")
 #'   #> [1] ""
 #'   Sys.getenv("var.name")
 #'   #> [1] "7"
-#'   
+#'
 #'   Sys.unsetenv("var.name")
 #'   Sys.unsetenv("testname")
-#'   
+#'
 #'   DIZutils::setenv2(key = var.name, val = var.value)
 #'   Sys.getenv("testname")
 #'   #> [1] "7"
