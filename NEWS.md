@@ -5,6 +5,9 @@
 #### New Features
 
 * added option support for `feedback` function
+#### Docs
+
+* updated rep2 function which was ahead in dizutils
 #### Others
 
 * towards sufficient cran checks
