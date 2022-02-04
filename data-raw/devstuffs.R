@@ -34,7 +34,7 @@ my_desc$del("LazyData")
 # Set the version
 my_desc$set_version("0.0.0.9001")
 # The title of your package
-my_desc$set(Title = "Lightweight utilities for 'DIZ' R Package Development")
+my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
 my_desc$set(
   Description = paste0(
@@ -127,6 +127,8 @@ usethis::use_build_ignore(".github")
 usethis::use_build_ignore("cran-comments.md")
 usethis::use_build_ignore("logfile.log")
 usethis::use_build_ignore("NEWS.md")
+usethis::use_build_ignore("CRAN-RELEASE")
+usethis::use_build_ignore("CRAN-SUBMISSION")
 
 
 ## .gitignore:

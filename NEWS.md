@@ -7,4 +7,5 @@
 * added option support for `feedback` function
 #### Others
 
+* first attempt for new package. Testing pending
 * first commit
