@@ -253,7 +253,7 @@ feedback_to_ui <-
                                           easyClose = TRUE,
                                           print_this))
     }, error = function(e) {
-      title <- "Sorry, an error has occured"
+      # title <- "Sorry, an error has occured"
       msg <- paste0(
         "`shiny` is not installed. So the error '",
         print_this,
@@ -504,7 +504,7 @@ log_set_defaults <- function(print_this = NULL,
 #'
 #' @export
 #'
-log_get_default_options <- function(){
+log_get_default_options <- function() {
   default <- list(
     "diztools.log.headless" = TRUE,
     "diztools.log.type" = "Info",
@@ -530,7 +530,7 @@ log_get_default_options <- function(){
 #'
 #' @export
 #'
-log_remove_options <- function(){
+log_remove_options <- function() {
   options(sapply(grep(
     pattern = "^(diztools.log.)",
     x = names(options()),
@@ -545,18 +545,18 @@ log_remove_options <- function(){
 #'
 #' @return Nothing.
 #'
-log_internal_test <- function(){
-  print_this = NULL
-  type = NULL
-  ui = NULL
-  console = NULL
-  logfile = NULL
-  logjs = NULL
-  prefix = NULL
-  suffix = NULL
-  findme = NULL
-  logfile_dir = NULL
-  headless = NULL
+log_internal_test <- function() {
+  print_this <- NULL
+  type <- NULL
+  ui <- NULL
+  console <- NULL
+  logfile <- NULL
+  logjs <- NULL
+  prefix <- NULL
+  suffix <- NULL
+  findme <- NULL
+  logfile_dir <- NULL
+  headless <- NULL
 
   new_defaults <- list(
     print_this = print_this,

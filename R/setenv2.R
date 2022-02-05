@@ -50,7 +50,7 @@
 #' @export
 #'
 setenv2 <- function(key, val) {
-  args = list(val)
-  names(args) = key
+  args <- list(val)
+  names(args) <- key
   do.call(Sys.setenv, args)
 }

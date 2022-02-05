@@ -11,6 +11,8 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* fixed typo in example caused failing tests
+* working on migrating logging functions; fixing errors with normalizepath
 * updated readme badge urls
 * shiny, shinyjs to suggests; removed call to installed.packages
 * updated news.md
