@@ -24,10 +24,7 @@
 #' @return No return value, called for side effects (see description)
 #' @examples
 #' \donttest{
-#' close_all_connections(
-#'   logfile_dir = tempdir(),
-#'   headless = TRUE
-#' )}
+#' close_all_connections()}
 #' @export
 #'
 close_all_connections <-
@@ -42,7 +39,7 @@ close_all_connections <-
     DIZtools::feedback(
       "Closed all file/database connections.",
       findme = "f8df9a9b0d",
-      logfile_dir = logfile_dir,
-      headless = headless
+      logfile_dir = options()[["dizutils.logfile_dir"]],
+      headless = options()[["dizutils.headless"]]
     )
   }

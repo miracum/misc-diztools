@@ -432,6 +432,8 @@ cleanup_old_logfile <- function(logfile_dir) {
 #' @description This function sets the default log options. Parameters not
 #'   supplied to this function will be set with the default value.
 #'
+#' @inheritParams feedback
+#'
 #' @return No return value, called for side effects (see description)
 #' @examples
 #'   DIZtools::log_set_defaults()
