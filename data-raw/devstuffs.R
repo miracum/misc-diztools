@@ -32,7 +32,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.0.9004")
+my_desc$set_version("0.0.0.9005")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -85,6 +85,7 @@ usethis::use_package("R", min_version = "3.1.0", type = "Depends")
 ## Imports
 ## For `get_config()`:
 usethis::use_package("config", type = "Imports")
+usethis::use_package("utils", type = "Imports")
 usethis::use_package("magrittr", type = "Imports")
 # usethis::use_package("data.table", type = "Imports")
 ## For `combine_stats`:

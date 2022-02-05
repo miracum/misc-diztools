@@ -1,6 +1,6 @@
 Package: DIZtools
 Title: Lightweight Utilities for 'DIZ' R Package Development
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Date: 2022-02-05
 Authors@R: c(
     person("Jonathan M.", "Mang", , "jonathan.mang@uk-erlangen.de", role = c("aut", "cre"),
@@ -24,7 +24,8 @@ Imports:
     config,
     magrittr,
     parsedate,
-    rapportools
+    rapportools,
+    utils
 Suggests: 
     lintr,
     shiny,

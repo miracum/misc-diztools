@@ -198,7 +198,7 @@ feedback_to_console <-
         findme = findme,
         prefix = prefix,
         suffix = suffix,
-        logfile_dir
+        logfile_dir = logfile_dir
       )
     } else if (length(print_this) > 1) {
       i <- 1
@@ -228,7 +228,7 @@ feedback_to_console <-
           findme = findme,
           prefix = prefix,
           suffix = suffix,
-          logfile_dir
+          logfile_dir = logfile_dir
         )
         i <- i + 1
       }
@@ -333,7 +333,7 @@ feedback_to_logfile <-
     res <- paste0("[", Sys.time(), "] ", res, "\n")
 
     logfile_dir <- clean_path(pathname = logfile_dir,
-                                             remove.slash = TRUE)
+                              remove.slash = TRUE)
 
     if (rapportools::is.empty(logfile_dir)) {
       feedback(
@@ -586,7 +586,10 @@ log_internal_test <- function() {
   options()[["diztools.log.prefix"]]
 
   feedback("here should be a prefix now")
-  feedback("here should be another locally overwritten prefix now", prefix = "local prefix - ")
+  feedback(
+    "here should be another locally overwritten prefix now",
+    prefix = "local prefix - "
+  )
   feedback("here should be the global prefix again")
 
   options()[grepl(pattern = "^(diztools.log.)", x = names(options()))]

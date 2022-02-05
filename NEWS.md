@@ -11,6 +11,7 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* added rapportools dependency; fixed śome linting errors
 * fixed typo in example caused failing tests
 * working on migrating logging functions; fixing errors with normalizepath
 * updated readme badge urls
