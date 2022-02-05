@@ -27,7 +27,7 @@ The development version can be installed using
 
 ```r
 install.packages("remotes")
-remotes::install_github("miracum/misc-diztools", ref = "development")
+remotes::install_github("miracum/misc-diztools", ref = "dev")
 ```
 
 ## More Infos
