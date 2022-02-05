@@ -27,11 +27,11 @@ Repeat something with the ability to also collapse the output.
   ## rep2 is the same like rep:
   rep(x = "ha", 3)
   #> "ha" "ha" "ha"
-  DIZutils::rep2(x = "ha", 3)
+  rep2(x = "ha", 3)
   #> "ha" "ha" "ha"
 
   ## ... but you can also use the arguments from `paste`:
-  DIZutils::rep2(x = "ha", n = 3, collapse = "")
+  rep2(x = "ha", n = 3, collapse = "")
   #> "hahaha"
 
 }

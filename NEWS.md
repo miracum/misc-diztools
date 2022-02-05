@@ -11,6 +11,8 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* updated readme badge urls
+* shiny, shinyjs to suggests; removed call to installed.packages
 * updated news.md
 * updated licence statements
 * towards sufficient cran checks

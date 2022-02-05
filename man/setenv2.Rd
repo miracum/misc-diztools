@@ -36,7 +36,7 @@ Create a system environment variable with the use of variables.
   Sys.unsetenv("var.name")
   Sys.unsetenv("testname")
 
-  DIZutils::setenv2(key = var.name, val = var.value)
+  setenv2(key = var.name, val = var.value)
   Sys.getenv("testname")
   #> [1] "7"
   Sys.getenv("var.name")

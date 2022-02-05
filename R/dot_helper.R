@@ -14,21 +14,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title notin helper function
+#' Dot Helper
 #'
-#' @description Function to return elements of x that are not in y.
+#' https://github.com/tidyverse/magrittr/issues/29
 #'
-#' @param x Object 1.
-#' @param y Object 2.
-#' @return Returns the result of !%in%(x,y)
-#' @examples
-#' tmp1 <- c("a","b","c")
-#' tmp2 <- c("b", "c", "d")
-#' tmp1 %notin% tmp2
-#' @export
-# define %notin% function
-# nolint start
-"%notin%" <- function(x, y) {
-  return(!("%in%"(x, y)))
+#' @name dot_helper
+#' @keywords internal
+if (getRversion() >= "2.15.1") {
+  utils::globalVariables(c("."))
 }
-# nolint end

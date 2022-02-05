@@ -35,8 +35,14 @@
 #'
 clean_path <- function(pathname, remove.slash = FALSE) {
   if (remove.slash) {
-    return(gsub("\\/$", "", pathname))
+    pathname %>%
+      normalizePath() %>%
+      gsub("\\/$", "", .) %>%
+      return()
   } else {
-    return(gsub("([[:alnum:]])$", "\\1/", pathname))
+    pathname %>%
+      normalizePath() %>%
+      gsub("([[:alnum:]])$", "\\1/", .) %>%
+      return()
   }
 }

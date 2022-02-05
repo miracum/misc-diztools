@@ -332,11 +332,11 @@ feedback_to_logfile <-
     # and a linebreak at the end:
     res <- paste0("[", Sys.time(), "] ", res, "\n")
 
-    logfile_dir <- DIZutils::clean_path_name(pathname = logfile_dir,
+    logfile_dir <- clean_path(pathname = logfile_dir,
                                              remove.slash = TRUE)
 
     if (rapportools::is.empty(logfile_dir)) {
-      DIZutils::feedback(
+      feedback(
         print_this = paste0(
           "'logfile_dir' was empty and automatically",
           " switched to 'tempdir()' in the previous log-entry."
@@ -347,8 +347,7 @@ feedback_to_logfile <-
       logfile_dir <- tempdir()
     }
 
-    path_with_file <- file.path(logfile_dir, "logfile.log") %>%
-      normalizePath()
+    path_with_file <- file.path(logfile_dir, "logfile.log")
 
     # Open the connection to the logfile:
     log_con <- file(path_with_file, open = "a")
@@ -403,20 +402,26 @@ feedback_get_formatted_string <-
 #' @export
 #'
 cleanup_old_logfile <- function(logfile_dir) {
+
   logfile_dir <-
-    clean_path_name(pathname = logfile_dir, remove.slash = TRUE)
-  path_with_file <- file.path(logfile_dir, "logfile.log") %>%
-    normalizePath()
+    clean_path(pathname = logfile_dir, remove.slash = TRUE)
+
+  tryCatch({
+    path_with_file <- file.path(logfile_dir, "logfile.log") %>%
+      normalizePath()
+  }, error = function(e) {
+    message(e)
+  })
+
   # Check if logfile.log is already the logfile for this session:
-  if (isTRUE(file.exists(path_with_file))) {
+  if (file.exists(path_with_file)) {
     ## There is an old logfile, so rename the logfile.log to
     ## logfile_2020-01-01-1234h:
     filename_datetime <- format(Sys.time(), "%Y-%m-%d-%H%M%OS")
     path_with_file_datetime <- file.path(
       logfile_dir,
       paste0("logfile_", filename_datetime, ".log")
-    ) %>%
-      normalizePath()
+    )
     file.rename(from = path_with_file, to = path_with_file_datetime)
     ## ... and create a new logfile:
     file.create(path_with_file)
