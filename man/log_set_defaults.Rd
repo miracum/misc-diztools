@@ -26,6 +26,6 @@ This function sets the default log options. Parameters not
   supplied to this function will be set with the default value.
 }
 \examples{
-  DIZtools::set_log_options()
+  DIZtools::log_set_defaults()
 
 }

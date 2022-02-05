@@ -434,7 +434,7 @@ cleanup_old_logfile <- function(logfile_dir) {
 #'
 #' @return No return value, called for side effects (see description)
 #' @examples
-#'   DIZtools::set_log_options()
+#'   DIZtools::log_set_defaults()
 #'
 #' @export
 #'
