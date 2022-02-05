@@ -106,6 +106,8 @@ usethis::use_package("parsedate", type = "Imports")
 # Suggests
 usethis::use_package("testthat", type = "Suggests")
 usethis::use_package("lintr", type = "Suggests")
+usethis::use_package("shiny", type = "Suggests")
+usethis::use_package("shinyjs", type = "Suggests")
 
 
 

@@ -247,7 +247,13 @@ feedback_to_ui <-
     catch_msg <- paste0("Something went wrong while trying",
                         " to show feedback to the UI.",
                         " Are you sure the GUI is running? ")
-    if (!"shiny" %in% installed.packages()) {
+    tryCatch({
+      title <- type
+      shiny::showModal(shiny::modalDialog(title = title,
+                                          easyClose = TRUE,
+                                          print_this))
+    }, error = function(e) {
+      title <- "Sorry, an error has occured"
       msg <- paste0(
         "`shiny` is not installed. So the error '",
         print_this,
@@ -263,36 +269,7 @@ feedback_to_ui <-
         headless = TRUE,
         ui = FALSE
       )
-    } else {
-      tryCatch({
-        if (isTRUE(type == "Error")) {
-          title <- "Sorry, an error has occured"
-        } else {
-          title <- type
-        }
-        shiny::showModal(shiny::modalDialog(title = title,
-                                            easyClose = TRUE,
-                                            print_this))
-      },
-      error = function(cond) {
-        feedback(
-          print_this = paste0(catch_msg, cond),
-          type = "Error",
-          findme = "58eb015c10",
-          logfile_dir = logfile_dir,
-          headless = headless
-        )
-      },
-      warning = function(cond) {
-        feedback(
-          print_this = paste0(catch_msg, cond),
-          type = "Warning",
-          findme = "ef7fa319a5",
-          logfile_dir = logfile_dir,
-          headless = headless
-        )
-      })
-    }
+    })
   }
 
 #' @title Feedback to the gui/browser-console with logjs. Internal use.

@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-02-04)
+## Unreleased (2022-02-05)
 
 #### New Features
 
@@ -11,6 +11,7 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* updated news.md
 * updated licence statements
 * towards sufficient cran checks
 * first attempt for new package. Testing pending
