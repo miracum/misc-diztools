@@ -14,6 +14,7 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* added mustwork-arg to normalizepath
 * enhancements to clean-path and log
 * added rapportools dependency; fixed śome linting errors
 * fixed typo in example caused failing tests

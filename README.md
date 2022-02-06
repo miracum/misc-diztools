@@ -13,7 +13,7 @@
 
 The R package `DIZtools` provides utility functions used for the R package development infrastructure inside the data integration centers ('DIZ') to standardize and facilitate repetitive tasks such as setting up a database connection or issuing notification messages and to avoid redundancy.
 
-:bulb: `DIZtools` contains all "lightweighted" functions of `DIZutils` making it a lot easier to install, while `DIZutils` has a lot of dependencies and system requirements.
+:bulb: `DIZtools` contains all "lightweighted" functions of [`DIZutils`](https://github.com/miracum/misc-dizutils) making it a lot quicker to install, while [`DIZutils`](https://github.com/miracum/misc-dizutils) has a lot of dependencies and system requirements.
 
 ## Installation
 
