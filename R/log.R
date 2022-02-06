@@ -347,7 +347,8 @@ feedback_to_logfile <-
       logfile_dir <- tempdir()
     }
 
-    path_with_file <- file.path(logfile_dir, "logfile.log")
+    path_with_file <- file.path(logfile_dir, "logfile.log") %>%
+      normalizePath(mustWork = FALSE)
 
     # Open the connection to the logfile:
     log_con <- file(path_with_file, open = "a")
@@ -406,12 +407,8 @@ cleanup_old_logfile <- function(logfile_dir) {
   logfile_dir <-
     clean_path(pathname = logfile_dir, remove.slash = TRUE)
 
-  tryCatch({
-    path_with_file <- file.path(logfile_dir, "logfile.log") %>%
-      normalizePath()
-  }, error = function(e) {
-    message(e)
-  })
+  path_with_file <- file.path(logfile_dir, "logfile.log") %>%
+    normalizePath(mustWork = FALSE)
 
   # Check if logfile.log is already the logfile for this session:
   if (file.exists(path_with_file)) {

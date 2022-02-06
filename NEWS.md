@@ -1,11 +1,14 @@
 # DIZtools NEWS
 
-## Unreleased (2022-02-05)
+## Unreleased (2022-02-06)
 
 #### New Features
 
 * added normalizepath to file.path calls
 * added option support for `feedback` function
+#### Fixes
+
+* fixed some missing docs; cran checks should work now
 #### Docs
 
 * updated rep2 function which was ahead in dizutils
