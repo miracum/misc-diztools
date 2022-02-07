@@ -58,7 +58,7 @@
 #'   or on a GUI frontend (headless = FALSE).
 #' @return No return value, called for publishing a message.
 #' @examples
-#' log(
+#' feedback(
 #'   print_this = "This is an error message you can provide",
 #'   type = "Error",
 #'   findme = "215bb3695c",
@@ -68,7 +68,7 @@
 #'
 #' @export
 #'
-log <-
+feedback <-
   function(print_this = NULL,
            type = NULL,
            ui = NULL,
@@ -158,9 +158,9 @@ log <-
 #' @title Print to the console. Internal use only.
 #' @description  Helper function for the feedback function to print
 #'   stuff to the console. Everything will also be added to the logfile.
-#'   Internal use. Use the robust 'log' function instead.
+#'   Internal use. Use the robust 'feedback' function instead.
 #'
-#' @inheritParams log
+#' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_console <-
@@ -238,8 +238,8 @@ feedback_to_console <-
 #' @title Feedback to the user with a modal. Internal use.
 #' @description  Helper function for the feedback function to show modals
 #'   to the gui/user. Everything will also be added to the logfile.
-#'   Internal use. Use the robust 'log' function instead.
-#' @inheritParams log
+#'   Internal use. Use the robust 'feedback' function instead.
+#' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_ui <-
@@ -249,7 +249,7 @@ feedback_to_ui <-
                         " Are you sure the GUI is running? ")
     tryCatch({
       title <- type
-      shiny::showModal(shiny::modalDialog(title = title,
+      shiny::showModal(shiny::modalDiafeedback(title = title,
                                           easyClose = TRUE,
                                           print_this))
     }, error = function(e) {
@@ -261,7 +261,7 @@ feedback_to_ui <-
         "install.packages('shiny')",
         "` to also make this error beeing displayed in the GUI."
       )
-      log(
+      feedback(
         print_this = msg,
         type = "Error",
         findme = "443de63bba",
@@ -275,8 +275,8 @@ feedback_to_ui <-
 #' @title Feedback to the gui/browser-console with logjs. Internal use.
 #' @description  Helper function for the feedback function to also show the
 #'   messages to the gui/user via the browser console.
-#'   Internal use. Use the robust 'log' function instead.
-#' @inheritParams log
+#'   Internal use. Use the robust 'feedback' function instead.
+#' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_logjs <- function(print_this, logfile_dir, headless) {
@@ -286,7 +286,7 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
     shinyjs::logjs(print_this)
   },
   error = function(cond) {
-    log(
+    feedback(
       print_this = paste0(catch_msg, cond),
       type = "Error",
       findme = "2e68833975",
@@ -295,7 +295,7 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
     )
   },
   warning = function(cond) {
-    log(
+    feedback(
       print_this = paste0(catch_msg, cond),
       type = "Warning",
       findme = "f3600cc9d2",
@@ -308,8 +308,8 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
 #' @title Add to the logfile. Internal use.
 #' @description  Helper function for the feedback function to add content
 #'   to the logfile. Internal use.
-#'   Use the robust 'log' function instead.
-#' @inheritParams log
+#'   Use the robust 'feedback' function instead.
+#' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_logfile <-
@@ -332,7 +332,7 @@ feedback_to_logfile <-
     # and a linebreak at the end:
     res <- paste0("[", Sys.time(), "] ", res, "\n")
 
-    logfile_dir <- clean_path(pathname = logfile_dir,
+    logfile_dir <- clean_path_name(pathname = logfile_dir,
                               remove.slash = TRUE)
 
     path_with_file <- file.path(logfile_dir, "logfile.log") %>%
@@ -353,8 +353,8 @@ feedback_to_logfile <-
 #'   than can be added to the logfile and/or be displayed in the console.
 #'   CAUTION: 'print_this' must be of length 1! For arrays loop through them
 #'   by hand and call this function several times!
-#'   Internal use. Use the robust 'log' function instead.
-#' @inheritParams log
+#'   Internal use. Use the robust 'feedback' function instead.
+#' @inheritParams feedback
 #' @return Returns a properly an consistent formatted string containing
 #'   the parameters handed over to this function.
 #'
@@ -380,7 +380,7 @@ feedback_get_formatted_string <-
 #'   and renames it (if existing) to "logfile_20xx-xx-xx-xxxxxx.log".
 #'   Then a new, empty, logfile "logfile.log" is created.
 #'
-#' @inheritParams log
+#' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
 #' @importFrom magrittr "%>%"
@@ -393,7 +393,7 @@ feedback_get_formatted_string <-
 cleanup_old_logfile <- function(logfile_dir) {
 
   logfile_dir <-
-    clean_path(pathname = logfile_dir, remove.slash = TRUE)
+    clean_path_name(pathname = logfile_dir, remove.slash = TRUE)
 
   path_with_file <- file.path(logfile_dir, "logfile.log") %>%
     normalizePath(mustWork = FALSE)
@@ -417,7 +417,7 @@ cleanup_old_logfile <- function(logfile_dir) {
 #' @description This function sets the default log options. Parameters not
 #'   supplied to this function will be set with the default value.
 #'
-#' @inheritParams log
+#' @inheritParams feedback
 #'
 #' @return No return value, called for side effects (see description)
 #' @examples
@@ -563,21 +563,21 @@ log_internal_test <- function() {
   log_remove_options()
   options()[grepl(pattern = "^(diztools)", x = names(options()))]
 
-  log("test")
-  log("test with prefix", prefix = "prefixxxx ")
-  log("test without prefix")
-  log("Setting prefix gobally now...")
+  feedback("test")
+  feedback("test with prefix", prefix = "prefixxxx ")
+  feedback("test without prefix")
+  feedback("Setting prefix gobally now...")
 
   options()[["diztools.log.prefix"]]
   log_set_defaults(prefix = "global prefix - ")
   options()[["diztools.log.prefix"]]
 
-  log("here should be a prefix now")
-  log(
+  feedback("here should be a prefix now")
+  feedback(
     "here should be another locally overwritten prefix now",
     prefix = "local prefix - "
   )
-  log("here should be the global prefix again")
+  feedback("here should be the global prefix again")
 
   options()[grepl(pattern = "^(diztools.log.)", x = names(options()))]
 }
