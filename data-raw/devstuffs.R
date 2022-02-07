@@ -32,7 +32,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.0.9008")
+my_desc$set_version("0.0.0.9009")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -99,6 +99,8 @@ usethis::use_package("parsedate", type = "Imports")
 # usethis::use_package("shinyjs", type = "Imports")
 ## For xml_to_json:
 # usethis::use_package("xml2", type = "Imports")
+## For `feedback()`:
+usethis::use_package("logger", type = "Imports")
 
 
 # Suggests

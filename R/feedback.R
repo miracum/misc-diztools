@@ -24,6 +24,7 @@
 #'   console and to logfile.
 #'   One of these must be a string with length > 0: print_me, console, ui.
 #'   Default parameters can be set using the function
+#'   `DIZtools::log_set_defaults`.
 #' @param print_this (Optional, String, default: "")
 #' @param type (Optional, String, default: "Info")
 #'   E.g. "Warning", "Error". Default: "Info"
@@ -173,16 +174,19 @@ feedback_to_console <-
            logfile_dir,
            headless = TRUE) {
     if (length(print_this) == 1) {
+      logtype <- log_map_type_to_loggertype(type)
       res <-
         feedback_get_formatted_string(
           print_this = print_this,
-          type = type,
+          type = logtype,
           findme = findme,
           prefix = prefix,
           suffix = suffix
         )
       # To console:
-      message(res)
+      # message(res)
+      logger::log_level(level = logtype, res)
+
       # To logjs:
       if (isTRUE(logjs)) {
         feedback_to_logjs(
@@ -203,16 +207,20 @@ feedback_to_console <-
     } else if (length(print_this) > 1) {
       i <- 1
       for (tmp in print_this) {
+        logtype <- log_map_type_to_loggertype(type)
         res <-
           feedback_get_formatted_string(
             print_this = tmp,
-            type = type,
+            type = logtype,
             findme = findme,
             prefix = paste0(prefix, i, ": "),
             suffix = suffix
           )
+
         # To console:
-        message(res)
+        # message(res)
+        logger::log_level(level = logtype, res)
+
         # To logjs:
         if (isTRUE(logjs)) {
           feedback_to_logjs(
@@ -361,12 +369,15 @@ feedback_to_logfile <-
 feedback_get_formatted_string <-
   function(print_this, type, findme, prefix, suffix) {
     if (length(print_this) == 1) {
-      if (findme == "") {
-        res <- paste0("[", type, "] ", prefix, print_this, suffix)
+      if (is.null(type) || !all(class(type) == "character")) {
+        type <- ""
       } else {
-        res <- paste0("[", type, "] ",
-                      prefix, print_this, suffix, " (", findme, ")")
+        type <- paste0("[", type, "] ")
       }
+      if (findme != "") {
+        findme <- paste0(" (", findme, ")")
+      }
+      res <- paste0(type, prefix, print_this, suffix, findme)
     } else {
       res <- paste0("Length of input 'print_this' is not == 1. ",
                     "See function description. (55a445fe57)")
@@ -443,6 +454,9 @@ log_set_defaults <- function(print_this = NULL,
     # print("Skipping option assignment. Already done.")
     return()
   } else{
+    ## Set the log layout:
+    logger::log_layout(logger::layout_glue_colors)
+
     ## Assign default options:
     options(log_get_default_options())
 
@@ -470,8 +484,6 @@ log_set_defaults <- function(print_this = NULL,
 
       ## Assign the new options:
       options(new_defaults)
-    } else {
-      return()
     }
 
     ## Further checks:
@@ -525,6 +537,35 @@ log_remove_options <- function() {
   ), function(x) {
     return(NULL)
   }, USE.NAMES = TRUE))
+}
+
+#' @title Get the logger type from the type string (the argument of the
+#'   `feedback()` function)
+#' @description Mapping the log-types from string to logger::<type>.
+#'
+#' @return The `logger`type. If no corresponding logger-type is found,
+#'   the result will be `NULL`.
+#' @examples
+#'   log_map_type_to_loggertype("error")
+#'   ## will return: `logger::ERROR`
+#'
+log_map_type_to_loggertype <- function(type) {
+  type <- tolower(type)
+  if (type == "info") {
+    return(logger::INFO)
+  } else if (type == "debug") {
+    return(logger::DEBUG)
+  } else if (type == "trace") {
+    return(logger::TRACE)
+  } else if (type == "warning" || type == "warn") {
+    return(logger::WARN)
+  } else if (type == "err" || type == "error") {
+    return(logger::ERROR)
+  } else if (type == "fatal") {
+    return(logger::FATAL)
+  } else {
+    return(NULL)
+  }
 }
 
 #' @title Internal function for debugging only.

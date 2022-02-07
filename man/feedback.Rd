@@ -75,6 +75,7 @@ This function provides the functionality to publish
   console and to logfile.
   One of these must be a string with length > 0: print_me, console, ui.
   Default parameters can be set using the function
+  `DIZtools::log_set_defaults`.
 }
 \examples{
 feedback(

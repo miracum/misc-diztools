@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-02-06)
+## Unreleased (2022-02-07)
 
 #### New Features
 
@@ -8,12 +8,19 @@
 * added option support for `feedback` function
 #### Fixes
 
+* mustwork=FALSE to clean_path
 * fixed some missing docs; cran checks should work now
+#### Refactorings
+
+* reverted to `feedback` instead of `log` (log is the logarithm :facepalm:
+* changed `feedback()` to `log()`
 #### Docs
 
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* updated all `feedback` references to `log`
+* removed unnecessary dependency to rapportools
 * added mustwork-arg to normalizepath
 * enhancements to clean-path and log
 * added rapportools dependency; fixed śome linting errors
