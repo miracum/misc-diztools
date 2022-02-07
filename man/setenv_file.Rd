@@ -2,7 +2,7 @@
 % Please edit documentation in R/setenv_file.R
 \name{setenv_file}
 \alias{setenv_file}
-\title{set_env_vars helper function}
+\title{Set all variables of a `.env` file to the system environment.}
 \usage{
 setenv_file(env_file)
 }

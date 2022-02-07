@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title set_env_vars helper function
+#' @title Set all variables of a `.env` file to the system environment.
 #'
 #' @description Internal function to set environment variables that are
 #'   necessary for the database connections with \code{db_connection}.

@@ -43,7 +43,7 @@ get_config <-
     },
     error = function(cond) {
       cond <- paste(unlist(cond), collapse = " ")
-      feedback(
+      DIZtools::log(
         print_this = paste0("Cannot access config_file. ", cond),
         type = "Error",
         findme = "e3e1b9c5f9"
@@ -52,7 +52,7 @@ get_config <-
     },
     warning = function(cond) {
       cond <- paste(unlist(cond), collapse = " ")
-      feedback(
+      DIZtools::log(
         print_this = paste0("Cannot access config_file. ", cond),
         type = "Warning",
         findme = "718e0f3d88"

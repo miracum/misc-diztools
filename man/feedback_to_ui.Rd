@@ -6,19 +6,6 @@
 \usage{
 feedback_to_ui(print_this, type, logfile_dir, headless = FALSE)
 }
-\arguments{
-\item{print_this}{(Optional, String, default: "")}
-
-\item{type}{(Optional, String, default: "Info")
-E.g. "Warning", "Error". Default: "Info"}
-
-\item{logfile_dir}{(Optional, String, default: "tempdir()")
-The absolute path to folder where the logfile will be stored.}
-
-\item{headless}{(Optional, Boolean, default: TRUE)
-Indicating, if the function is run only in the console (headless = TRUE)
-or on a GUI frontend (headless = FALSE).}
-}
 \value{
 No return value, called for side effects (see description)
 }

@@ -58,7 +58,7 @@
 #'   or on a GUI frontend (headless = FALSE).
 #' @return No return value, called for publishing a message.
 #' @examples
-#' feedback(
+#' log(
 #'   print_this = "This is an error message you can provide",
 #'   type = "Error",
 #'   findme = "215bb3695c",
@@ -68,7 +68,7 @@
 #'
 #' @export
 #'
-feedback <-
+log <-
   function(print_this = NULL,
            type = NULL,
            ui = NULL,
@@ -255,13 +255,13 @@ feedback_to_ui <-
     }, error = function(e) {
       # title <- "Sorry, an error has occured"
       msg <- paste0(
-        "`shiny` is not installed. So the error '",
+        "`shiny` might not be installed. So the error '",
         print_this,
         "' can't be displayed to the UI! Please install shiny e.g. via `",
         "install.packages('shiny')",
         "` to also make this error beeing displayed in the GUI."
       )
-      feedback(
+      log(
         print_this = msg,
         type = "Error",
         findme = "443de63bba",
@@ -286,7 +286,7 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
     shinyjs::logjs(print_this)
   },
   error = function(cond) {
-    feedback(
+    log(
       print_this = paste0(catch_msg, cond),
       type = "Error",
       findme = "2e68833975",
@@ -295,7 +295,7 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
     )
   },
   warning = function(cond) {
-    feedback(
+    log(
       print_this = paste0(catch_msg, cond),
       type = "Warning",
       findme = "f3600cc9d2",
@@ -563,21 +563,21 @@ log_internal_test <- function() {
   log_remove_options()
   options()[grepl(pattern = "^(diztools)", x = names(options()))]
 
-  feedback("test")
-  feedback("test with prefix", prefix = "prefixxxx ")
-  feedback("test without prefix")
-  feedback("Setting prefix gobally now...")
+  log("test")
+  log("test with prefix", prefix = "prefixxxx ")
+  log("test without prefix")
+  log("Setting prefix gobally now...")
 
   options()[["diztools.log.prefix"]]
   log_set_defaults(prefix = "global prefix - ")
   options()[["diztools.log.prefix"]]
 
-  feedback("here should be a prefix now")
-  feedback(
+  log("here should be a prefix now")
+  log(
     "here should be another locally overwritten prefix now",
     prefix = "local prefix - "
   )
-  feedback("here should be the global prefix again")
+  log("here should be the global prefix again")
 
   options()[grepl(pattern = "^(diztools.log.)", x = names(options()))]
 }

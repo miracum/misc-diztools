@@ -19,7 +19,6 @@
 #'   run of the app. It will close all open connections to files
 #'   or databases. This closes ALL connections. Not just the ones
 #'   opened by this package.
-#'   You can set arguments for the logginf function `DIZtools::feedback`
 #'
 #' @return No return value, called for side effects (see description)
 #' @examples
@@ -29,17 +28,13 @@
 #'
 close_all_connections <-
   function() {
-    DIZtools::feedback(
+    DIZtools::log(
       "Doing application cleanup",
-      findme = "c178d630e1",
-      logfile_dir = options()[["dizutils.logfile_dir"]],
-      headless = options()[["dizutils.headless"]]
+      findme = "c178d630e1"
     )
     closeAllConnections()
-    DIZtools::feedback(
+    DIZtools::log(
       "Closed all file/database connections.",
-      findme = "f8df9a9b0d",
-      logfile_dir = options()[["dizutils.logfile_dir"]],
-      headless = options()[["dizutils.headless"]]
+      findme = "f8df9a9b0d"
     )
   }

@@ -14,7 +14,6 @@ This function is meant to be called at the end of a
   run of the app. It will close all open connections to files
   or databases. This closes ALL connections. Not just the ones
   opened by this package.
-  You can set arguments for the logginf function `DIZtools::feedback`
 }
 \examples{
 \donttest{

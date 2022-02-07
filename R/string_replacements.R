@@ -58,7 +58,7 @@ string_replacements <-
     } else if (replace_mapping == "default") {
       replaceme <- replaceme
     } else {
-      DIZtools::feedback(
+      DIZtools::log(
         print_this = paste0(
           "There is something handed over as `replace_mapping`",
           " which is not a list. Using default replacement instead."
