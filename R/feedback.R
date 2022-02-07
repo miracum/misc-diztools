@@ -25,6 +25,9 @@
 #'   One of these must be a string with length > 0: print_me, console, ui.
 #'   Default parameters can be set using the function
 #'   `DIZtools::log_set_defaults`.
+#'   This function uses `logger` as package to log to the console. If you are
+#'   new to this function, consider using `logger` instead.
+#' @seealso \url{https://daroczig.github.io/logger/}
 #' @param print_this (Optional, String, default: "")
 #' @param type (Optional, String, default: "Info")
 #'   E.g. "Warning", "Error". Default: "Info"

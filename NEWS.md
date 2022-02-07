@@ -4,6 +4,7 @@
 
 #### New Features
 
+* added `logger` for console logging
 * added normalizepath to file.path calls
 * added option support for `feedback` function
 #### Fixes
