@@ -32,7 +32,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.0.9011")
+my_desc$set_version("0.0.0.9012")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -116,6 +116,10 @@ fn <- ".Rbuildignore"
 if (file.exists(fn)) {
   file.remove(fn)
 }
+usethis::use_build_ignore("## --------------")
+usethis::use_build_ignore("## This file is auto generated.")
+usethis::use_build_ignore("## Please apply changes in `./data-raw/devstuffs.R`!")
+usethis::use_build_ignore("## -------------")
 usethis::use_build_ignore("LICENSE.md")
 usethis::use_build_ignore(".gitlab-ci.yml")
 usethis::use_build_ignore("data-raw")
@@ -136,6 +140,10 @@ fn <- ".gitignore"
 if (file.exists(fn)) {
   file.remove(fn)
 }
+usethis::use_git_ignore("## --------------")
+usethis::use_git_ignore("## This file is auto generated.")
+usethis::use_git_ignore("## Please apply changes in `./data-raw/devstuffs.R`!")
+usethis::use_git_ignore("## -------------")
 usethis::use_git_ignore("/*")
 usethis::use_git_ignore("/*/")
 usethis::use_git_ignore("*.log")

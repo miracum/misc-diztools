@@ -16,7 +16,7 @@ No return value, called for side effects (see description)
 \description{
 This function is called once at the beginning of the
   runtime of the tool. It checks whether there is an old logfile
-  and renames it (if existing) to "logfile_20xx-xx-xx-xxxxxx.log".
+  and renames it (if existing) to "logfile_20yy-mm-dd-HHMMSS.log".
   Then a new, empty, logfile "logfile.log" is created.
 }
 \examples{

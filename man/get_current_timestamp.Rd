@@ -2,14 +2,14 @@
 % Please edit documentation in R/get_current_timestamp.R
 \name{get_current_timestamp}
 \alias{get_current_timestamp}
-\title{Quickly get the current timestamp}
+\title{Quickly get the current time stamp}
 \usage{
 get_current_timestamp(no_spaces = FALSE)
 }
 \arguments{
-\item{no_spaces}{Boolean. Default = `FALSE`. Specifies wether the output
+\item{no_spaces}{Boolean. Default = `FALSE`. Specifies whether the output
 can contain spaces or not. E.g. if the output is for human reading,
-`no_spaces = FALSE` is a good option. As suffix for filenames
+`no_spaces = FALSE` is a good option. As suffix for file names
 (e.g. logfiles), `no_spaces = TRUE` might be a good option.}
 }
 \value{
@@ -17,7 +17,7 @@ The current timestamp in always the same format.
 #'
 }
 \description{
-Function to quickly get the current timestamp without
+Function to quickly get the current time stamp without
   need to handle format-options etc.
 }
 \examples{

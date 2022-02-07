@@ -18,7 +18,7 @@
 #' @description Hack variable into global env (bypasses R CMD checks).
 #'   This does create a new variable in the R environment but NOT a new
 #'   variable in the system environment. To create a system environment
-#'   variable beeing accessible via `Sys.getenv(...)`, use the function
+#'   variable being accessible via `Sys.getenv(...)`, use the function
 #'   `DIZtools::setenv2(key = "varname", val = 7)`.
 #'   Old function name: `global_env_hack()`
 #'

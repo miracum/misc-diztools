@@ -1,6 +1,6 @@
 Package: DIZtools
 Title: Lightweight Utilities for 'DIZ' R Package Development
-Version: 0.0.0.9011
+Version: 0.0.0.9012
 Date: 2022-02-07
 Authors@R: c(
     person("Jonathan M.", "Mang", , "jonathan.mang@uk-erlangen.de", role = c("aut", "cre"),
@@ -32,4 +32,3 @@ Suggests:
     testthat
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.1.2

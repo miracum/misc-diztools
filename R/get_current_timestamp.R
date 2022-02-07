@@ -14,14 +14,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Quickly get the current timestamp
+#' @title Quickly get the current time stamp
 #'
-#' @description Function to quickly get the current timestamp without
+#' @description Function to quickly get the current time stamp without
 #'   need to handle format-options etc.
 #'
-#' @param no_spaces Boolean. Default = `FALSE`. Specifies wether the output
+#' @param no_spaces Boolean. Default = `FALSE`. Specifies whether the output
 #'   can contain spaces or not. E.g. if the output is for human reading,
-#'   `no_spaces = FALSE` is a good option. As suffix for filenames
+#'   `no_spaces = FALSE` is a good option. As suffix for file names
 #'   (e.g. logfiles), `no_spaces = TRUE` might be a good option.
 #' @return The current timestamp in always the same format.
 #'#'

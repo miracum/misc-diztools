@@ -43,6 +43,6 @@ The base-R function `==` is not working in an intended
 
 }
 \references{
-<http://www.cookbook-r.com/Manipulating_data/
+\url{http://www.cookbook-r.com/Manipulating_data/}
   Comparing_vectors_or_factors_with_NA/>
 }

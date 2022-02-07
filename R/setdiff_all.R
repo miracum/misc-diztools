@@ -22,7 +22,7 @@
 #'   elements not contained in the second are in the resulting vector.
 #'   So if you also want in include all elements being in the second vector
 #'   but not in the first, you can use this function. In this case you are
-#'   searching for elements beeing in the union of both vectors but not
+#'   searching for elements being in the union of both vectors but not
 #'   in the intersect of both vectors. This function is a symmetric function.
 #'   It doesn't matter in which order you input the vectors, the content
 #'   will be the same. Only the order of the elements inside the output

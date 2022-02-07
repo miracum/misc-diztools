@@ -53,8 +53,8 @@
 #'   Recommended with length 10.
 #'   String to find the message in the code.
 #'   E.g. 10-digit random hex from
-#'   (<https://www.browserling.com/tools/random-hex>) or
-#'   (<https://onlinerandomtools.com/generate-random-hexadecimal-numbers>)
+#'   \url{https://www.browserling.com/tools/random-hex} or
+#'   \url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}
 #' @param logfile_dir (Optional, String, default: "tempdir()")
 #'   The absolute path to folder where the logfile will be stored.
 #' @param headless (Optional, Boolean, default: TRUE)
@@ -360,7 +360,7 @@ feedback_to_logfile <-
 
 #' @title Format the feedback string
 #' @description  Helper function for the feedback function to combine the input
-#'   parameters in proper manner to ge a pretty and informative string which
+#'   parameters in proper manner to be a pretty and informative string which
 #'   than can be added to the logfile and/or be displayed in the console.
 #'   CAUTION: 'print_this' must be of length 1! For arrays loop through them
 #'   by hand and call this function several times!
@@ -391,7 +391,7 @@ feedback_get_formatted_string <-
 #' @title Archives the current logfile and creates a new blank one.
 #' @description  This function is called once at the beginning of the
 #'   runtime of the tool. It checks whether there is an old logfile
-#'   and renames it (if existing) to "logfile_20xx-xx-xx-xxxxxx.log".
+#'   and renames it (if existing) to "logfile_20yy-mm-dd-HHMMSS.log".
 #'   Then a new, empty, logfile "logfile.log" is created.
 #'
 #' @inheritParams feedback

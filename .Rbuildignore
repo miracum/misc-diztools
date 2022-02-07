@@ -1,3 +1,7 @@
+^## --------------$
+^## This file is auto generated\.$
+^## Please apply changes in `\./data-raw/devstuffs\.R`!$
+^## -------------$
 ^LICENSE\.md$
 ^\.gitlab-ci\.yml$
 ^data-raw$
@@ -11,5 +15,3 @@
 ^NEWS\.md$
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
-^.*\.Rproj$
-^\.Rproj\.user$

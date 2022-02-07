@@ -19,7 +19,7 @@
 #' @description The base-R function `==` is not working in an intended
 #'   way for NAs and boolean. This function fixes this.
 #'
-#' @references <http://www.cookbook-r.com/Manipulating_data/
+#' @references \url{http://www.cookbook-r.com/Manipulating_data/}
 #'   Comparing_vectors_or_factors_with_NA/>
 #'
 #' @param v1 First vector or element
