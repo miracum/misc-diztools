@@ -260,7 +260,7 @@ feedback_to_ui <-
                         " Are you sure the GUI is running? ")
     tryCatch({
       title <- type
-      shiny::showModal(shiny::modalDiafeedback(title = title,
+      shiny::showModal(shiny::modalDialog(title = title,
                                           easyClose = TRUE,
                                           print_this))
     }, error = function(e) {
@@ -545,12 +545,12 @@ log_remove_options <- function() {
 #' @title Get the logger type from the type string (the argument of the
 #'   `feedback()` function)
 #' @description Mapping the log-types from string to logger::<type>.
+#'   E.g. the string "Info" will be mapped to `logger::INFO`.
+#'
+#' @param type (String) The type of the message. E.g. "error", "Info".
 #'
 #' @return The `logger`type. If no corresponding logger-type is found,
 #'   the result will be `NULL`.
-#' @examples
-#'   log_map_type_to_loggertype("error")
-#'   ## will return: `logger::ERROR`
 #'
 log_map_type_to_loggertype <- function(type) {
   type <- tolower(type)

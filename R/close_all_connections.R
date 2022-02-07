@@ -28,12 +28,12 @@
 #'
 close_all_connections <-
   function() {
-    DIZtools::log(
+    DIZtools::feedback(
       "Doing application cleanup",
       findme = "c178d630e1"
     )
     closeAllConnections()
-    DIZtools::log(
+    DIZtools::feedback(
       "Closed all file/database connections.",
       findme = "f8df9a9b0d"
     )

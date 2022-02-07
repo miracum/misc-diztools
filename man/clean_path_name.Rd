@@ -21,7 +21,7 @@ Function to clean paths to surely have a tailing slash or not.
 }
 \examples{
 # Both function calls will return "home/test/"
-clean_path("home/test")
-clean_path("home/test/")
+clean_path_name("home/test")
+clean_path_name("home/test/")
 
 }

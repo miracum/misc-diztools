@@ -7,15 +7,14 @@
 \usage{
 log_map_type_to_loggertype(type)
 }
+\arguments{
+\item{type}{(String) The type of the message. E.g. "error", "Info".}
+}
 \value{
 The `logger`type. If no corresponding logger-type is found,
   the result will be `NULL`.
 }
 \description{
 Mapping the log-types from string to logger::<type>.
-}
-\examples{
-  log_map_type_to_loggertype("error")
-  ## will return: `logger::ERROR`
-
+  E.g. the string "Info" will be mapped to `logger::INFO`.
 }

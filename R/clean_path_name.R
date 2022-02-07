@@ -27,8 +27,8 @@
 #'
 #' @examples
 #' # Both function calls will return "home/test/"
-#' clean_path("home/test")
-#' clean_path("home/test/")
+#' clean_path_name("home/test")
+#' clean_path_name("home/test/")
 #'
 #' @export
 #'

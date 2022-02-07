@@ -20,6 +20,7 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* added reference to logger in feedback function info
 * updated all `feedback` references to `log`
 * removed unnecessary dependency to rapportools
 * added mustwork-arg to normalizepath
