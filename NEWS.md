@@ -9,6 +9,7 @@
 * added option support for `feedback` function
 #### Fixes
 
+* example errors and cran check corrections
 * mustwork=FALSE to clean_path
 * fixed some missing docs; cran checks should work now
 #### Refactorings
