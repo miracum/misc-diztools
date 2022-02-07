@@ -15,3 +15,6 @@
 ^NEWS\.md$
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
+^reconf\.sh$
+^diztools\.Rproj$
+^\.Rproj\.user$
