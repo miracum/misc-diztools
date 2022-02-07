@@ -6,6 +6,10 @@
 \usage{
 cleanup_old_logfile(logfile_dir)
 }
+\arguments{
+\item{logfile_dir}{(Optional, String, default: "tempdir()")
+The absolute path to folder where the logfile will be stored.}
+}
 \value{
 No return value, called for side effects (see description)
 }

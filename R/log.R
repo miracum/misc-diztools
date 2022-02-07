@@ -158,9 +158,9 @@ log <-
 #' @title Print to the console. Internal use only.
 #' @description  Helper function for the feedback function to print
 #'   stuff to the console. Everything will also be added to the logfile.
-#'   Internal use. Use the robust 'feedback' function instead.
+#'   Internal use. Use the robust 'log' function instead.
 #'
-#' @inheritParams feedback
+#' @inheritParams log
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_console <-
@@ -238,8 +238,8 @@ feedback_to_console <-
 #' @title Feedback to the user with a modal. Internal use.
 #' @description  Helper function for the feedback function to show modals
 #'   to the gui/user. Everything will also be added to the logfile.
-#'   Internal use. Use the robust 'feedback' function instead.
-#' @inheritParams feedback
+#'   Internal use. Use the robust 'log' function instead.
+#' @inheritParams log
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_ui <-
@@ -275,8 +275,8 @@ feedback_to_ui <-
 #' @title Feedback to the gui/browser-console with logjs. Internal use.
 #' @description  Helper function for the feedback function to also show the
 #'   messages to the gui/user via the browser console.
-#'   Internal use. Use the robust 'feedback' function instead.
-#' @inheritParams feedback
+#'   Internal use. Use the robust 'log' function instead.
+#' @inheritParams log
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_logjs <- function(print_this, logfile_dir, headless) {
@@ -308,8 +308,8 @@ feedback_to_logjs <- function(print_this, logfile_dir, headless) {
 #' @title Add to the logfile. Internal use.
 #' @description  Helper function for the feedback function to add content
 #'   to the logfile. Internal use.
-#'   Use the robust 'feedback' function instead.
-#' @inheritParams feedback
+#'   Use the robust 'log' function instead.
+#' @inheritParams log
 #' @return No return value, called for side effects (see description)
 #'
 feedback_to_logfile <-
@@ -353,8 +353,8 @@ feedback_to_logfile <-
 #'   than can be added to the logfile and/or be displayed in the console.
 #'   CAUTION: 'print_this' must be of length 1! For arrays loop through them
 #'   by hand and call this function several times!
-#'   Internal use. Use the robust 'feedback' function instead.
-#' @inheritParams feedback
+#'   Internal use. Use the robust 'log' function instead.
+#' @inheritParams log
 #' @return Returns a properly an consistent formatted string containing
 #'   the parameters handed over to this function.
 #'
@@ -380,7 +380,7 @@ feedback_get_formatted_string <-
 #'   and renames it (if existing) to "logfile_20xx-xx-xx-xxxxxx.log".
 #'   Then a new, empty, logfile "logfile.log" is created.
 #'
-#' @inheritParams feedback
+#' @inheritParams log
 #' @return No return value, called for side effects (see description)
 #'
 #' @importFrom magrittr "%>%"
@@ -417,7 +417,7 @@ cleanup_old_logfile <- function(logfile_dir) {
 #' @description This function sets the default log options. Parameters not
 #'   supplied to this function will be set with the default value.
 #'
-#' @inheritParams feedback
+#' @inheritParams log
 #'
 #' @return No return value, called for side effects (see description)
 #' @examples
