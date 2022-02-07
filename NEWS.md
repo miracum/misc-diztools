@@ -18,6 +18,7 @@
 * changed `feedback()` to `log()`
 #### Docs
 
+* updated spelling
 * updated news.md
 * updated rep2 function which was ahead in dizutils
 #### Others

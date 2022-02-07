@@ -15,3 +15,5 @@
 ^NEWS\.md$
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
+^.*\.Rproj$
+^\.Rproj\.user$
