@@ -23,6 +23,7 @@
 * updated rep2 function which was ahead in dizutils
 #### Others
 
+* added re-creation of gitignore and buildignore
 * added reference to logger in feedback function info
 * updated all `feedback` references to `log`
 * removed unnecessary dependency to rapportools
