@@ -134,6 +134,7 @@ usethis::use_build_ignore("NEWS.md")
 usethis::use_build_ignore("CRAN-RELEASE")
 usethis::use_build_ignore("CRAN-SUBMISSION")
 usethis::use_build_ignore(".Rproj")
+usethis::use_build_ignore("reconf.sh")
 usethis::use_build_ignore("diztools.Rproj")
 
 

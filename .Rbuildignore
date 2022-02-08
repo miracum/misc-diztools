@@ -16,5 +16,6 @@
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
 ^\.Rproj$
+^reconf\.sh$
 ^diztools\.Rproj$
 ^\.Rproj\.user$
