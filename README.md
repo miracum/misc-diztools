@@ -7,8 +7,8 @@
 [![codecov](https://codecov.io/gh/miracum/misc-diztools/branch/main/graph/badge.svg)](https://app.codecov.io/gh/miracum/misc-diztools)
 [![pipeline status](https://gitlab.miracum.org/miracum/misc/diztools/badges/main/pipeline.svg)](https://gitlab.miracum.org/miracum/misc/diztools/-/commits/main)
 [![coverage report](https://gitlab.miracum.org/miracum/misc/diztools/badges/main/coverage.svg)](https://gitlab.miracum.org/miracum/misc/diztools/-/commits/main)
-<!--[![CRAN Status Badge](https://www.r-pkg.org/badges/version-ago/DIZtools)](https://cran.r-project.org/package=DIZtools)
-[![Cran Checks](https://cranchecks.info/badges/worst/DIZtools)](https://cran.r-project.org/web/checks/check_results_DIZtools.html)-->
+[![CRAN Status Badge](https://www.r-pkg.org/badges/version-ago/DIZtools)](https://cran.r-project.org/package=DIZtools)
+[![Cran Checks](https://cranchecks.info/badges/worst/DIZtools)](https://cran.r-project.org/web/checks/check_results_DIZtools.html)
 <!-- badges: end -->
 
 The R package `DIZtools` provides utility functions used for the R package development infrastructure inside the data integration centers ('DIZ') to standardize and facilitate repetitive tasks such as setting up a database connection or issuing notification messages and to avoid redundancy.
