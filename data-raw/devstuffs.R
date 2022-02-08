@@ -32,13 +32,13 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.1")
+my_desc$set_version("0.0.2")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
 my_desc$set(
   Description = paste0(
-    "Leightweight utility functions used for the R package development",
+    "Lightweight utility functions used for the R package development",
     " infrastructure inside the data integration centers ('DIZ')",
     " to standardize and facilitate repetitive tasks",
     " such as setting up a database connection",
@@ -133,6 +133,8 @@ usethis::use_build_ignore("logfile.log")
 usethis::use_build_ignore("NEWS.md")
 usethis::use_build_ignore("CRAN-RELEASE")
 usethis::use_build_ignore("CRAN-SUBMISSION")
+usethis::use_build_ignore(".Rproj")
+usethis::use_build_ignore("diztools.Rproj")
 
 
 ## .gitignore:

@@ -1,6 +1,6 @@
 Package: DIZtools
 Title: Lightweight Utilities for 'DIZ' R Package Development
-Version: 0.0.1
+Version: 0.0.2
 Date: 2022-02-07
 Authors@R: c(
     person("Jonathan M.", "Mang", , "jonathan.mang@uk-erlangen.de", role = c("aut", "cre"),
@@ -10,7 +10,7 @@ Authors@R: c(
     person("MIRACUM - Medical Informatics in Research and Care in University Medicine", role = "fnd"),
     person("Universitätsklinikum Erlangen, Germany", role = "cph")
   )
-Description: Leightweight utility functions used for the R package
+Description: Lightweight utility functions used for the R package
     development infrastructure inside the data integration centers ('DIZ')
     to standardize and facilitate repetitive tasks such as setting up a
     database connection or issuing notification messages and to avoid
@@ -32,3 +32,4 @@ Suggests:
     testthat
 Encoding: UTF-8
 Language: en-US
+RoxygenNote: 7.1.2

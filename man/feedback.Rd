@@ -53,7 +53,6 @@ Same like prefix but at the end of each line.}
 Recommended with length 10.
 String to find the message in the code.
 E.g. 10-digit random hex from
-\url{https://www.browserling.com/tools/random-hex} or
 \url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}}
 
 \item{logfile_dir}{(Optional, String, default: "tempdir()")
