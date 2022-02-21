@@ -1,6 +1,26 @@
 # DIZtools NEWS
 
-## Unreleased (2022-02-07)
+## Unreleased (2022-02-21)
+
+#### Docs
+
+* added badges to readme again
+#### Others
+
+* merged dev
+
+Full set of changes: [`v0.0.2...d935b3d`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.2...d935b3d)
+
+## v0.0.2 (2022-02-08)
+
+#### Others
+
+* cran version
+* added files to rbuildignore
+
+Full set of changes: [`v0.0.1...v0.0.2`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.1...v0.0.2)
+
+## v0.0.1 (2022-02-07)
 
 #### New Features
 

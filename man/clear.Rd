@@ -21,3 +21,8 @@ Function to clean the local environment.
   The call of this function clears the console and the local environment
   variables.
 }
+\examples{
+clear()
+
+
+}

@@ -26,6 +26,10 @@
 #'
 #' @return Nothing.
 #'
+#' @examples
+#' clear()
+#'
+#'
 #' @export
 #'
 clear <- function(keep_environment = FALSE,
@@ -39,6 +43,9 @@ clear <- function(keep_environment = FALSE,
   }
   if (!keep_environment) {
     # Clears the Global Environment/variables/data:
+    # @Jonathan: it could be that this is not allowed by cran policy
+    # "Packages should not modify the global environment (user’s workspace)."
+    # ref: https://cran.r-project.org/web/packages/policies.html
     rm(list = ls(all.names = TRUE, envir = sys.frame(-1)),
        envir = sys.frame(-1))
   }
