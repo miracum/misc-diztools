@@ -34,23 +34,17 @@
 #'
 clear <- function(keep_environment = FALSE,
                   keep_console = FALSE) {
-  ## Inspiration: https://stackoverflow.com/questions/62901476
-  gctorture(TRUE)
-  if (!keep_console) {
-    ## Cleanup the backend in RStudio:
-    ## Clears the console (imitates CTR + L)
-    cat("\014")
-  }
-  if (!keep_environment) {
-    # Clears the Global Environment/variables/data:
-    # @Jonathan: it could be that this is not allowed by cran policy
-    # "Packages should not modify the global environment (user’s workspace)."
-    # ref: https://cran.r-project.org/web/packages/policies.html
-    rm(list = ls(all.names = TRUE, envir = sys.frame(-1)),
-       envir = sys.frame(-1))
-  }
-  ## Garbage collector/Clear unused RAM:
-  invisible(gc())
-  ## Turn it off (important or it gets very slow):
-  gctorture(FALSE)
+  cleaR::clear(keep_environment = keep_environment, keep_console = keep_console)
+  DIZtools::feedback(
+    print_this = paste0(
+      "`DIZtools::clear()` was replaced by `cleaR::clear()`.",
+      " This time, your call of `DIZtools::clear()` will be redirected",
+      " directly to `cleaR::clear()` but it will be removed from `DIZtools`",
+      " in the near future. So update your code to avoid it to break with",
+      " later releases of `DIZutils` by simply replacing `DIZtools::clear()`",
+      " with `cleaR::clear()`."
+    ),
+    type = "Warning",
+    findme = "70b96bdac4"
+  )
 }
