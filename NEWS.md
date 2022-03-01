@@ -1,5 +1,13 @@
 # DIZtools NEWS
 
+## Unreleased (2022-03-01)
+
+#### Fixes
+
+* global option now work for feedback
+
+Full set of changes: [`v0.0.3...0042835`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...0042835)
+
 ## v0.0.3 (2022-02-24)
 
 #### Refactorings
