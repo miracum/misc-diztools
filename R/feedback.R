@@ -428,13 +428,21 @@ cleanup_old_logfile <- function(logfile_dir) {
 
 #' @title Set default options for all log-functions
 #' @description This function sets the default log options. Parameters not
-#'   supplied to this function will be set with the default value.
+#'   supplied to this function will be set with the default value. If you
+#'   want to reset all parameters to the default ones, run
+#'   \code{log_set_defaults(reset = TRUE)}. This can also be combined with
+#'   a new custom default value:
+#'   \code{log_set_defaults(reset = TRUE, prefix = "Prefix")}
+#'   which will reset all parameters to default and afterwards assign "Prefix"
+#'   as new global prefix.
 #'
 #' @inheritParams feedback
+#' @param reset (boolean, default = FALSE) Should all parameters be reset to
+#'   their default values?
 #'
-#' @return No return value, called for side effects (see description)
+#' @return No return value, called for side effects (see description).
 #' @examples
-#'   DIZtools::log_set_defaults()
+#'   DIZtools::log_set_defaults(logfile_dir = tempdir())
 #'
 #' @export
 #'
@@ -448,52 +456,56 @@ log_set_defaults <- function(print_this = NULL,
                              suffix = NULL,
                              findme = NULL,
                              logfile_dir = NULL,
-                             headless = NULL) {
-
-  if (isTRUE(options()[["diztools.log.__init_success"]])) {
+                             headless = NULL,
+                             reset = FALSE) {
+  if (isTRUE(options()[["diztools.log.__init_success"]]) && !reset) {
     ## The default settings have already been written to to the options.
-    ## Another call with  would overwrite user-changes!
-    # print("Skipping option assignment. Already done.")
-    return()
-  } else{
+    ## Another call would overwrite user changes!
+
+    # print("Skipping setting default values. Already done.")
+  } else {
+    # print("Setting default values.")
+
     ## Set the log layout:
     logger::log_layout(logger::layout_glue_colors)
 
     ## Assign default options:
     options(log_get_default_options())
 
-    new_defaults <- list(
-      print_this = print_this,
-      type = type,
-      ui = ui,
-      console = console,
-      logfile = logfile,
-      logjs = logjs,
-      prefix = prefix,
-      suffix = suffix,
-      findme = findme,
-      logfile_dir = logfile_dir,
-      headless =  headless
-    )
-
-    ## Remove NULL elements:
-    new_defaults[sapply(new_defaults, is.null)] <- NULL
-
-    if (length(new_defaults) > 0) {
-      ## Add prefix:
-      names(new_defaults) <-
-        paste0("diztools.log.", names(new_defaults))
-
-      ## Assign the new options:
-      options(new_defaults)
-    }
-
-    ## Further checks:
-    stopifnot(is.logical(options()[["diztools.log.headless"]]))
-
-    ## Set flag to not overwrite the settings in another call:
+    ## Set flag to not overwrite the (user) settings in another call:
     options("diztools.log.__init_success" = TRUE)
   }
+
+  new_defaults <- list(
+    print_this = print_this,
+    type = type,
+    ui = ui,
+    console = console,
+    logfile = logfile,
+    logjs = logjs,
+    prefix = prefix,
+    suffix = suffix,
+    findme = findme,
+    logfile_dir = logfile_dir,
+    headless =  headless
+  )
+
+  ## Remove NULL elements:
+  new_defaults[sapply(new_defaults, is.null)] <- NULL
+
+  if (length(new_defaults) > 0) {
+    ## Add prefix:
+    names(new_defaults) <-
+      paste0("diztools.log.", names(new_defaults))
+
+    # print(paste("Assigning new values", names(new_defaults), collapse = ", "))
+
+    ## Assign the new options:
+    options(new_defaults)
+  }
+
+  ## Further checks:
+  stopifnot(is.logical(options()[["diztools.log.headless"]]))
 }
 
 #' @title Get the default settings for the logging function as list.
@@ -602,7 +614,7 @@ log_internal_test <- function() {
     headless =  headless
   )
 
-  clear()
+  cleaR::clear()
   log_remove_options()
   options()[grepl(pattern = "^(diztools)", x = names(options()))]
 
@@ -621,6 +633,9 @@ log_internal_test <- function() {
     prefix = "local prefix - "
   )
   feedback("here should be the global prefix again")
+
+  log_set_defaults(reset = TRUE)
+  feedback("All settings were resetted - here should no prefix.")
 
   options()[grepl(pattern = "^(diztools.log.)", x = names(options()))]
 }
