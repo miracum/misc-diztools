@@ -2,6 +2,9 @@
 
 ## Unreleased (2022-03-03)
 
+#### New Features
+
+* added `is.empty()` function
 #### Fixes
 
 * global option now work for feedback
@@ -9,7 +12,7 @@
 
 * updated news.md
 
-Full set of changes: [`v0.0.3...fce9ddf`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...fce9ddf)
+Full set of changes: [`v0.0.3...a241b68`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...a241b68)
 
 ## v0.0.3 (2022-02-24)
 
