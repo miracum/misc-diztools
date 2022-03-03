@@ -15,7 +15,8 @@ log_set_defaults(
   suffix = NULL,
   findme = NULL,
   logfile_dir = NULL,
-  headless = NULL
+  headless = NULL,
+  reset = FALSE
 )
 }
 \arguments{
@@ -60,15 +61,24 @@ The absolute path to folder where the logfile will be stored.}
 \item{headless}{(Optional, Boolean, default: TRUE)
 Indicating, if the function is run only in the console (headless = TRUE)
 or on a GUI frontend (headless = FALSE).}
+
+\item{reset}{(boolean, default = FALSE) Should all parameters be reset to
+their default values?}
 }
 \value{
-No return value, called for side effects (see description)
+No return value, called for side effects (see description).
 }
 \description{
 This function sets the default log options. Parameters not
-  supplied to this function will be set with the default value.
+  supplied to this function will be set with the default value. If you
+  want to reset all parameters to the default ones, run
+  \code{log_set_defaults(reset = TRUE)}. This can also be combined with
+  a new custom default value:
+  \code{log_set_defaults(reset = TRUE, prefix = "Prefix")}
+  which will reset all parameters to default and afterwards assign "Prefix"
+  as new global prefix.
 }
 \examples{
-  DIZtools::log_set_defaults()
+  DIZtools::log_set_defaults(logfile_dir = tempdir())
 
 }
