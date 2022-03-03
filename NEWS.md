@@ -1,5 +1,13 @@
 # DIZtools NEWS
 
+## Unreleased (2022-03-03)
+
+#### New Features
+
+* added function `check_if_unique_rows`
+
+Full set of changes: [`v0.0.4...bd648a5`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...bd648a5)
+
 ## v0.0.4 (2022-03-03)
 
 #### New Features
