@@ -2,6 +2,7 @@
 
 export("%notin%")
 export(assign_to_R_env)
+export(check_if_unique_rows)
 export(clean_path_name)
 export(cleanup_old_logfile)
 export(clear)

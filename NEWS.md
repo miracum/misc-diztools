@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-03-03)
+## v0.0.4 (2022-03-03)
 
 #### New Features
 
@@ -13,8 +13,12 @@
 
 * updated news.md
 * updated news.md
+#### Others
 
-Full set of changes: [`v0.0.3...6376a9a`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...6376a9a)
+* updated http --> https
+* new release 0.0.4
+
+Full set of changes: [`v0.0.3...v0.0.4`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...v0.0.4)
 
 ## v0.0.3 (2022-02-24)
 
