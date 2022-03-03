@@ -4,6 +4,7 @@
 
 #### New Features
 
+* added `trim.space()` and `vgsub()` as functions
 * added `is.empty()` function
 #### Fixes
 
@@ -13,7 +14,7 @@
 * updated news.md
 * updated news.md
 
-Full set of changes: [`v0.0.3...9246684`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...9246684)
+Full set of changes: [`v0.0.3...6376a9a`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...6376a9a)
 
 ## v0.0.3 (2022-02-24)
 
