@@ -26,8 +26,8 @@ String to find the message in the code.
 E.g. 10-digit random hex from
 \url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}}
 
-\item{stop}{(boolean) Should the function call \code{stop()} if there are
-non-unique rows?}
+\item{stop}{(boolean, default = FALSE) Should the function call
+\code{stop()} if there are non-unique rows in the data?}
 
 \item{feedback}{(boolean, default = TRUE) Should the function print
 text to the console depending on the result?}

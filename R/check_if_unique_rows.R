@@ -24,8 +24,8 @@
 #' @param data A data.table
 #' @param colname The name of the column to check for uniqueness.
 #' @inheritParams feedback
-#' @param stop (boolean) Should the function call \code{stop()} if there are
-#'   non-unique rows?
+#' @param stop (boolean, default = FALSE) Should the function call
+#'   \code{stop()} if there are non-unique rows in the data?
 #' @param feedback (boolean, default = TRUE) Should the function print
 #'   text to the console depending on the result?
 #' @param print_invalid_rows (boolean, default = TRUE) Should the function
