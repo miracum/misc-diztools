@@ -1,6 +1,26 @@
-#' Empty Value
+# DIZtools - Utilities for 'DIZ' R Package Development
+# Copyright (C) 2020-2022 Universitätsklinikum Erlangen, Germany
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#' @title Empty Value
 #'
-#' Rails-inspired helper that checks if vector values are "empty", i.e. if it's: \code{NULL}, zero-length, \code{NA}, \code{NaN}, \code{FALSE}, an empty string or \code{0}. Note that unlike its native R \code{is.<something>} sibling functions, \code{is.empty} is vectorised (hence the "values").
+#' @description Rails-inspired helper that checks if vector values are "empty",
+#'   i.e. if it's: \code{NULL}, zero-length, \code{NA}, \code{NaN},
+#'   \code{FALSE}, an empty string or \code{0}.
+#'   Note that unlike its native R \code{is.<something>} sibling functions,
+#'   \code{is.empty} is vectorised (hence the "values").
 #' @param x an object to check its emptiness
 #' @param trim trim whitespace? (\code{TRUE} by default)
 #' @param ... additional arguments for \code{\link{sapply}}
@@ -22,20 +42,28 @@
 #' }
 #' @export
 is.empty <- function(x, trim = TRUE, ...) {
-    if (length(x) <= 1) {
-        if (is.null(x))
-            return (TRUE)
-        if (length(x) == 0)
-            return (TRUE)
-        if (is.na(x) || is.nan(x))
-            return (TRUE)
-        if (is.character(x) && nchar(ifelse(trim, trim.space(x), x)) == 0)
-            return (TRUE)
-        if (is.logical(x) && !isTRUE(x))
-            return (TRUE)
-        if (is.numeric(x) && x == 0)
-            return (TRUE)
-        return (FALSE)
-    } else
-        sapply(x, is.empty, trim = trim, ...)
+  if (length(x) <= 1) {
+    if (is.null(x)) {
+      return(TRUE)
+    }
+    if (length(x) == 0) {
+      return(TRUE)
+    }
+    if (is.na(x) || is.nan(x)) {
+      return(TRUE)
+    }
+    if (is.character(x) &&
+        nchar(ifelse(trim, trim.space(x), x)) == 0) {
+      return(TRUE)
+    }
+    if (is.logical(x) && !isTRUE(x)) {
+      return(TRUE)
+    }
+    if (is.numeric(x) && x == 0) {
+      return(TRUE)
+    }
+    return(FALSE)
+  } else{
+    sapply(x, is.empty, trim = trim, ...)
+  }
 }

@@ -17,7 +17,11 @@ is.empty(x, trim = TRUE, ...)
 \item{...}{additional arguments for \code{\link{sapply}}}
 }
 \description{
-Rails-inspired helper that checks if vector values are "empty", i.e. if it's: \code{NULL}, zero-length, \code{NA}, \code{NaN}, \code{FALSE}, an empty string or \code{0}. Note that unlike its native R \code{is.<something>} sibling functions, \code{is.empty} is vectorised (hence the "values").
+Rails-inspired helper that checks if vector values are "empty",
+  i.e. if it's: \code{NULL}, zero-length, \code{NA}, \code{NaN},
+  \code{FALSE}, an empty string or \code{0}.
+  Note that unlike its native R \code{is.<something>} sibling functions,
+  \code{is.empty} is vectorised (hence the "values").
 }
 \examples{
 \dontrun{
