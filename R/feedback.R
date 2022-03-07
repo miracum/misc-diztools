@@ -348,12 +348,15 @@ feedback_to_logfile <-
     path_with_file <- file.path(logfile_dir, "logfile.log") %>%
       normalizePath(mustWork = FALSE)
 
-    # Open the connection to the logfile:
-    log_con <- file(path_with_file, open = "a")
+    if (!file.exists(path_with_file)) {
+      print(paste0("Creating new logfile since there is no yet at ",
+                   path_with_file))
+      dir.create(logfile_dir, recursive = TRUE)
+      file.create(path_with_file)
+    }
+
     # Write to the logfile:
-    cat(res, file = log_con)
-    # Close the connection to logfile:
-    close(log_con)
+    cat(res, file = path_with_file, append = TRUE)
   }
 
 
@@ -534,6 +537,31 @@ log_get_default_options <- function() {
   return(default)
 }
 
+
+#' @title Get the current settings for the logging function as list.
+#' @description Get the current settings for the logging function as list
+#'
+#' @return The list with the current parameters.
+#' @examples
+#'   log_get_current_options()
+#'
+#' @export
+#'
+log_get_current_options <- function() {
+  ## Get all names:
+  names <- grep(
+    pattern = "^(diztools.log.)",
+    x = names(options()),
+    value = TRUE
+  )
+
+  ## Remove internal stuff:
+  names <- names[!grepl(pattern = "^(diztools.log.__)", x = names)]
+
+  return(options()[names])
+}
+
+
 #' @title Remove all log-related options from `options()`.
 #' @description Remove all log-related options from `options()`.
 #'
@@ -552,6 +580,12 @@ log_remove_options <- function() {
     return(NULL)
   }, USE.NAMES = TRUE))
 }
+
+
+log_set_options_list <- function(options_list) {
+  options(options_list)
+}
+
 
 #' @title Get the logger type from the type string (the argument of the
 #'   `feedback()` function)

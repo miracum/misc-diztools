@@ -32,7 +32,9 @@ close_all_connections <-
       "Doing application cleanup",
       findme = "c178d630e1"
     )
+
     closeAllConnections()
+
     DIZtools::feedback(
       "Closed all file/database connections.",
       findme = "f8df9a9b0d"
