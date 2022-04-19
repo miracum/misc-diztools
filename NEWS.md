@@ -1,19 +1,20 @@
 # DIZtools NEWS
 
-## Unreleased (2022-04-11)
+## Unreleased (2022-04-19)
 
 #### New Features
 
 * added function `check_if_unique_rows`
 #### Fixes
 
+* importing data.table now for check_if_unique_rows
 * feedback function broke after calling `close_all_connections()`
 #### Docs
 
 * added default parameter for stop
 * updated news
 
-Full set of changes: [`v0.0.4...9938688`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...9938688)
+Full set of changes: [`v0.0.4...c0f8b69`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...c0f8b69)
 
 ## v0.0.4 (2022-03-03)
 
