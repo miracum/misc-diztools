@@ -13,8 +13,11 @@
 
 * added default parameter for stop
 * updated news
+#### Others
 
-Full set of changes: [`v0.0.4...c0f8b69`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...c0f8b69)
+* updated news md
+
+Full set of changes: [`v0.0.4...c40e2fb`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...c40e2fb)
 
 ## v0.0.4 (2022-03-03)
 

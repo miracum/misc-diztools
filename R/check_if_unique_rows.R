@@ -52,19 +52,30 @@ check_if_unique_rows <-
            print_invalid_rows = TRUE,
            return = TRUE) {
     if (length(unique(data[[colname]])) != nrow(data)) {
+      multiple_rows <- data[, .N, by = colname][get("N") > 1,]
       if (feedback) {
         DIZtools::feedback(
           print_this = paste0(
             "There are some values more than one time",
             " in column '",
             colname,
-            "'! Invalid rows: "
+            ifelse(
+              test = print_invalid_rows,
+              yes = paste0(
+                "'! Invalid/Multiple entries: '",
+                paste(multiple_rows[[colname]], collapse = "', '"),
+                "'"
+              ),
+              no = "'!"
+            )
           ),
           type = "Error",
           findme = findme
         )
-        ## Print rows with more than one row per colname:
-        data[, .N, by = colname][get("N") > 1]
+        if (print_invalid_rows) {
+          ## Print rows with more than one row per colname:
+          print(multiple_rows)
+        }
       }
       if (stop) {
         stop("See error above.")
@@ -75,11 +86,9 @@ check_if_unique_rows <-
     } else {
       if (feedback) {
         DIZtools::feedback(
-          print_this = paste0(
-            "No duplicate rows for colname '",
-            colname,
-            "' found. OK."
-          ),
+          print_this = paste0("No duplicate rows for colname '",
+                              colname,
+                              "' found. OK."),
           findme = findme
         )
       }
