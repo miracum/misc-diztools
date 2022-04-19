@@ -349,8 +349,6 @@ feedback_to_logfile <-
       normalizePath(mustWork = FALSE)
 
     if (!file.exists(path_with_file)) {
-      print(paste0("Creating new logfile since there is no yet at ",
-                   path_with_file))
       dir.create(logfile_dir, recursive = TRUE)
       file.create(path_with_file)
     }
