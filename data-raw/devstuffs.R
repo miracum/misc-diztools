@@ -138,6 +138,7 @@ usethis::use_build_ignore(".Rproj")
 usethis::use_build_ignore("reconf.sh")
 usethis::use_build_ignore("diztools.Rproj")
 usethis::use_build_ignore("man/figures")
+usethis::use_build_ignore("Rplots.pdf")
 
 
 ## .gitignore:

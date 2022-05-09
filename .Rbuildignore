@@ -19,3 +19,4 @@
 ^reconf\.sh$
 ^diztools\.Rproj$
 ^man/figures$
+^Rplots\.pdf$
