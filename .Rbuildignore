@@ -20,3 +20,4 @@
 ^diztools\.Rproj$
 ^man/figures$
 ^Rplots\.pdf$
+^\.Rproj\.user$
