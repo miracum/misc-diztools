@@ -137,6 +137,7 @@ usethis::use_build_ignore("CRAN-SUBMISSION")
 usethis::use_build_ignore(".Rproj")
 usethis::use_build_ignore("reconf.sh")
 usethis::use_build_ignore("diztools.Rproj")
+usethis::use_build_ignore("man/figures")
 
 
 ## .gitignore:
@@ -207,3 +208,32 @@ system(command = paste0(
   packagename,
   ' NEWS" --tag-prefix "v" -o "NEWS.md"'
 ))
+
+
+badger::badge_cran_download("DIZtools", "grand-total", "blue")
+badger::badge_cran_download("DIZtools", "last-month", "blue")
+badger::badge_dependencies("DIZtools")
+
+
+imgurl <- path.expand("~/development/Rpackages/bg1.jpeg")
+hexSticker::sticker(
+  subplot = imgurl,
+  package = "DIZtools",
+  s_width = 0.7,
+  s_height = 0.7,
+  s_x = 1,
+  s_y = 1,
+  p_size = 25,
+  p_x = 1,
+  p_y = 1,
+  filename = "man/figures/logo.png",
+  h_color = "#5c87ff", # "#b4f2e9",
+  p_color = "#5c87ff", # "#b4f2e9",
+  h_size = 0.8,
+  h_fill = "#b4e7f2",
+  spotlight = TRUE,
+  #l_width = 6,
+  #l_height = 6,
+  white_around_sticker = TRUE,
+  asp = 1
+)

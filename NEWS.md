@@ -15,13 +15,14 @@
 * updated news
 #### Others
 
+* updated news.md
 * merged origin/dev
 * updated devstuffs to get auto-changelog working again
 * removed console print in case of new logfile
 * added `print_invalid_rows` logic to function `check_if_unique_rows`
 * updated news md
 
-Full set of changes: [`v0.0.4...f527fde`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...f527fde)
+Full set of changes: [`v0.0.4...799b2db`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...799b2db)
 
 ## v0.0.4 (2022-03-03)
 
