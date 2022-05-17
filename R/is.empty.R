@@ -23,6 +23,9 @@
 #'   \code{is.empty} is vectorised (hence the "values").
 #' @param x an object to check its emptiness
 #' @param trim trim whitespace? (\code{TRUE} by default)
+#' @param all return overall result over list/vector instead of vector of
+#'   results? \code{is.empty(x, all = TRUE)} is the same like
+#'   \code{all(unlist(is.empty(x)))}
 #' @param ... additional arguments for \code{\link{sapply}}
 #' @source \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from `rapportools::is.empty()`}
 #' @examples \dontrun{
@@ -35,14 +38,19 @@
 #' is.empty(0.00)     # [1] TRUE
 #' is.empty("    ")   # [1] TRUE
 #' is.empty("foobar") # [1] FALSE
-#' is.empty("    ", trim = FALSE)    # [1] FALSE
-#' # is.empty is vectorised!
-#' all(is.empty(rep("", 10)))        # [1] TRUE
-#' all(is.empty(matrix(NA, 10, 10))) # [1] TRUE
+#' is.empty("    ", trim = FALSE)             # [1] FALSE
+#' ## is.empty is vectorised!
+#' all(is.empty(rep("", 10)))                 # [1] TRUE
+#' all(is.empty(matrix(NA, 10, 10)))          # [1] TRUE
+#' is.empty(matrix(NA, 10, 10), all = TRUE))  # [1] TRUE
 #' }
 #' @export
-is.empty <- function(x, trim = TRUE, ...) {
+is.empty <- function(x, trim = TRUE, all = FALSE, ...) {
   if (length(x) <= 1) {
+    if (is.list(x)) {
+      ## otherwise `x <- list(a = NULL)` causes an error:
+      x <- unlist(x)
+    }
     if (is.null(x)) {
       return(TRUE)
     }
@@ -64,6 +72,12 @@ is.empty <- function(x, trim = TRUE, ...) {
     }
     return(FALSE)
   } else{
-    sapply(x, is.empty, trim = trim, ...)
+    if (isTRUE(all)) {
+      all(unlist(sapply(
+        x, is.empty, trim = trim, all = all, ...
+      )))
+    } else {
+      sapply(x, is.empty, trim = trim, all = all, ...)
+    }
   }
 }

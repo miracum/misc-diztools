@@ -14,31 +14,30 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-context("log")
 
-test_that("correct functioning of log functions", {
-
+test_that(desc = "correct functioning of log functions", code = {
+  log_remove_options()
   log_dir <- tempdir()
-  expect_length(list.files(log_dir), 0)
 
   cleanup_old_logfile(log_dir)
 
-  feedback(
-    print_this = "This is a first message.",
-    logfile_dir = log_dir
-  )
+  feedback(print_this = "This is a first message.",
+           logfile_dir = log_dir)
 
-  feedback(
-    print_this = "This is a second message.",
-    logfile_dir = log_dir
-  )
+  feedback(print_this = "This is a second message.",
+           logfile_dir = log_dir)
+
+  con = file(paste0(log_dir, "/logfile.log"), "r")
+  lines_log = readLines(con)
+  close.connection(con)
+
+  expect_length(object = lines_log, n = 2)
 
   cleanup_old_logfile(log_dir)
 
-  expect_length(list.files(log_dir), 2)
 
-  do.call(
-    file.remove,
-    list(list.files(tempdir(), pattern = "log$", full.names = TRUE))
-  )
+  invisible(do.call(file.remove,
+                    list(
+                      list.files(tempdir(), pattern = "log$", full.names = TRUE)
+                    )))
 })

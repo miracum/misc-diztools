@@ -7,12 +7,16 @@
 \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from `rapportools::is.empty()`}
 }
 \usage{
-is.empty(x, trim = TRUE, ...)
+is.empty(x, trim = TRUE, all = FALSE, ...)
 }
 \arguments{
 \item{x}{an object to check its emptiness}
 
 \item{trim}{trim whitespace? (\code{TRUE} by default)}
+
+\item{all}{return overall result over list/vector instead of vector of
+results? \code{is.empty(x, all = TRUE)} is the same like
+\code{all(unlist(is.empty(x)))}}
 
 \item{...}{additional arguments for \code{\link{sapply}}}
 }
@@ -34,9 +38,10 @@ is.empty(0)        # [1] TRUE
 is.empty(0.00)     # [1] TRUE
 is.empty("    ")   # [1] TRUE
 is.empty("foobar") # [1] FALSE
-is.empty("    ", trim = FALSE)    # [1] FALSE
-# is.empty is vectorised!
-all(is.empty(rep("", 10)))        # [1] TRUE
-all(is.empty(matrix(NA, 10, 10))) # [1] TRUE
+is.empty("    ", trim = FALSE)             # [1] FALSE
+## is.empty is vectorised!
+all(is.empty(rep("", 10)))                 # [1] TRUE
+all(is.empty(matrix(NA, 10, 10)))          # [1] TRUE
+is.empty(matrix(NA, 10, 10), all = TRUE))  # [1] TRUE
 }
 }
