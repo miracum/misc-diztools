@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-05-18)
+## v0.0.5 (2022-05-18)
 
 #### New Features
 
@@ -17,6 +17,7 @@
 * updated news
 #### Others
 
+* new release `v0.0.5`
 * updated news.md
 * comment out logo creation to have png-file not altered at every devstuffs run
 * updated logo
@@ -28,7 +29,7 @@
 * added `print_invalid_rows` logic to function `check_if_unique_rows`
 * updated news md
 
-Full set of changes: [`v0.0.4...41a2ba7`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...41a2ba7)
+Full set of changes: [`v0.0.4...v0.0.5`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...v0.0.5)
 
 ## v0.0.4 (2022-03-03)
 

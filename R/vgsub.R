@@ -25,7 +25,7 @@
 #' @param ... additional arguments for \code{\link{gsub}} function
 #' @references See original thread for more details \url{https://stackoverflow.com/a/6954308/457898}. Special thanks to user Jean-Robert for this one!
 #' @return a character vector with string replacements
-#' @source \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from `rapportools::is.empty()`}
+#' @source \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from package `rapportools`}
 #' @export
 vgsub <- function(pattern, replacement, x, ...) {
   for (i in 1:length(pattern)) {
