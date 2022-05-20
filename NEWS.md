@@ -1,5 +1,13 @@
 # DIZtools NEWS
 
+## Unreleased (2022-05-20)
+
+#### Others
+
+* new dev version
+
+Full set of changes: [`v0.0.5...1106ff6`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...1106ff6)
+
 ## v0.0.5 (2022-05-18)
 
 #### New Features

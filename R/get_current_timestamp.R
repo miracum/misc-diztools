@@ -39,6 +39,6 @@ get_current_timestamp <- function(no_spaces = FALSE) {
   if (no_spaces) {
     return(format(Sys.time(), format = "%Y-%m-%d-%H%M%S"))
   } else {
-    return(format(Sys.time(), format = "%d.%m.%Y - %H:%M UTC"))
+    return(format(Sys.time(), format = "%d. %b %Y - %H:%M UTC"))
   }
 }
