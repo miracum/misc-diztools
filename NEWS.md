@@ -2,6 +2,9 @@
 
 ## Unreleased (2022-08-19)
 
+#### New Features
+
+* added new function `number_to_position()`
 #### Refactorings
 
 * slightly changed print format output of `get_current_timestamp()`
@@ -11,7 +14,7 @@
 * updated gha
 * new dev version
 
-Full set of changes: [`v0.0.5...d2bd984`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...d2bd984)
+Full set of changes: [`v0.0.5...50d44ba`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...50d44ba)
 
 ## v0.0.5 (2022-05-18)
 
