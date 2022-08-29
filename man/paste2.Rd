@@ -44,3 +44,6 @@ The base `paste` function but with the add on to also supply a
   #> [1] "cat, mouse and dog"
 }
 }
+\references{
+\url{https://stackoverflow.com/a/38276239}
+}

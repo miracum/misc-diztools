@@ -33,6 +33,7 @@
 #'          collapse_last = " and ")
 #'   #> [1] "cat, mouse and dog"
 #' }
+#' @references \url{https://stackoverflow.com/a/38276239}
 #' @export
 #'
 paste2 <- function(...,
