@@ -23,7 +23,8 @@
 #'
 #' @param collapse_last (string, optional) The string to use for the last
 #'   instance while collapsing. All other elements will be pasted using
-#'   the normal `collapse` argument.
+#'   the normal `collapse` argument. If `collapse` is not set, `collapse_last`
+#'   will be ignored.
 #' @inheritParams base::paste
 #' @return String. See`?paste` for details.
 #' @examples{
@@ -36,14 +37,23 @@
 #'
 paste2 <- function(...,
                    collapse = NULL,
-                   collapse_last = NULL) {
+                   collapse_last = NULL,
+                   sep = " ",
+                   recycle0 = FALSE) {
+  ## The result without any changes from the original `paste` function:
+  res <-
+    paste(...,
+          collapse = collapse,
+          sep = sep,
+          recycle0 = recycle0)
+
   if (is.character(collapse_last) && is.character(collapse)) {
     return(sub(
       pattern = paste0("(.*)", collapse),
       replacement = paste0("\\1", collapse_last),
-      x =  paste(..., collapse = collapse)
+      x = res
     ))
   } else {
-    return(paste(..., collapse = collapse))
+    return(res)
   }
 }

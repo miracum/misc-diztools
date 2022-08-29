@@ -4,7 +4,7 @@
 \alias{paste2}
 \title{Normal `paste` function with additional `collapse_last` argument.}
 \usage{
-paste2(..., collapse = NULL, collapse_last = NULL)
+paste2(..., collapse = NULL, collapse_last = NULL, sep = " ", recycle0 = FALSE)
 }
 \arguments{
 \item{...}{one or more \R objects, to be converted to character vectors.}
@@ -14,7 +14,17 @@ paste2(..., collapse = NULL, collapse_last = NULL)
 
 \item{collapse_last}{(string, optional) The string to use for the last
 instance while collapsing. All other elements will be pasted using
-the normal `collapse` argument.}
+the normal `collapse` argument. If `collapse` is not set, `collapse_last`
+will be ignored.}
+
+\item{sep}{a character string to separate the terms.  Not
+    \code{\link[base]{NA_character_}}.}
+
+\item{recycle0}{\code{\link[base]{logical}} indicating if zero-length
+    character arguments should lead to the zero-length
+    \code{\link[base]{character}(0)} after the \code{sep}-phase (which turns into
+    \code{""} in the \code{collapse}-phase, i.e., when \code{collapse} is
+    not \code{NULL}).}
 }
 \value{
 String. See`?paste` for details.
