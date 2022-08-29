@@ -4,6 +4,7 @@
 
 #### New Features
 
+* added `paste2` function with `collapse_last` argument
 * added new function `number_to_position()`
 #### Refactorings
 
@@ -17,7 +18,7 @@
 * updated gha
 * new dev version
 
-Full set of changes: [`v0.0.5...bd90fea`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...bd90fea)
+Full set of changes: [`v0.0.5...144fdf3`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...144fdf3)
 
 ## v0.0.5 (2022-05-18)
 
