@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-08-19)
+## Unreleased (2022-08-29)
 
 #### New Features
 
@@ -8,13 +8,16 @@
 #### Refactorings
 
 * slightly changed print format output of `get_current_timestamp()`
+#### Docs
+
+* updated news
 #### Others
 
 * updated gha
 * updated gha
 * new dev version
 
-Full set of changes: [`v0.0.5...50d44ba`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...50d44ba)
+Full set of changes: [`v0.0.5...bd90fea`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...bd90fea)
 
 ## v0.0.5 (2022-05-18)
 
