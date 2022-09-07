@@ -1,3 +1,5 @@
+# nolint start
+#
 # Cleanup the backend in RStudio:
 cat("\014") # Clears the console (imitates CTR + L)
 rm(list = ls(all.names = TRUE)) # Clears the Global Environment/variables/data
@@ -63,3 +65,4 @@ get_display_name2 <- function(settings){
 }
 get_display_name(settings)
 
+# nolint end

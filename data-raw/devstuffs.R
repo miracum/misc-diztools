@@ -1,3 +1,5 @@
+# nolint start
+
 packagename <- "DIZtools"
 
 # remove existing description object
@@ -32,7 +34,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.5.9005")
+my_desc$set_version("0.0.5.9006")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -195,6 +197,10 @@ usethis::use_git_ignore("!/cran-comments.md")
 usethis::use_tidy_description()
 
 
+badger::badge_cran_download("DIZtools", "grand-total", "blue")
+badger::badge_cran_download("DIZtools", "last-month", "blue")
+badger::badge_dependencies("DIZtools")
+
 # create NEWS.md using the python-package "auto-changelog" (must be installed)
 # https://www.conventionalcommits.org/en/v1.0.0/
 # build|ci|docs|feat|fix|perf|refactor|test
@@ -213,11 +219,6 @@ usethis::use_tidy_description()
 an <- autonewsmd::autonewsmd$new(repo_name = packagename)
 an$generate()
 an$write()
-
-
-badger::badge_cran_download("DIZtools", "grand-total", "blue")
-badger::badge_cran_download("DIZtools", "last-month", "blue")
-badger::badge_dependencies("DIZtools")
 
 #
 # imgurl <- path.expand("~/development/Rpackages/bg1.jpeg")
@@ -242,3 +243,5 @@ badger::badge_dependencies("DIZtools")
 #   white_around_sticker = FALSE,
 #   asp = 1
 # )
+
+# nolint end
