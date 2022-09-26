@@ -397,8 +397,6 @@ feedback_get_formatted_string <-
 #' @inheritParams feedback
 #' @return No return value, called for side effects (see description)
 #'
-#' @importFrom magrittr "%>%"
-#'
 #' @examples
 #' cleanup_old_logfile("path/to/logfile/dir/")
 #'

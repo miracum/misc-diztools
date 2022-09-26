@@ -34,8 +34,6 @@
 #'   or `FALSE` depending on the result? If `stop = TRUE` is set, the function
 #'   will end with `stop()` before returning anything.
 #'
-#' @importFrom data.table ".N"
-#'
 #' @examples
 #' \dontrun{
 #'   check_if_unique_rows(data)

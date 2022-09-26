@@ -60,6 +60,8 @@
 
 #### Other changes
 
+-   updated news.md
+    ([733844b](https://gitlab.miracum.org/miracum/misc/diztools/tree/733844b0485b6b4fdc95bd34411d513bd4b98e90))
 -   news.md now with autonewsmd package
     ([dd9b728](https://gitlab.miracum.org/miracum/misc/diztools/tree/dd9b728fcbd1ccf99da6d4c9fbac0164636435d4))
 -   added reference to SO for pattern
@@ -91,7 +93,7 @@
     ([c40e2fb](https://gitlab.miracum.org/miracum/misc/diztools/tree/c40e2fb7828a5b6bbb5053f16bdf748654e07d65))
 
 Full set of changes:
-[`v0.0.4...197b3ae`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...197b3ae)
+[`v0.0.4...733844b`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...733844b)
 
 ## v0.0.4 (2022-03-03)
 
