@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2022-09-07)
+## Unreleased (2022-09-26)
 
 #### New features
 
@@ -60,6 +60,8 @@
 
 #### Other changes
 
+-   introducing zzz.r
+    ([4a5ce5e](https://gitlab.miracum.org/miracum/misc/diztools/tree/4a5ce5e766faa7956601fa77baeafb687ccf3e2f))
 -   updated news.md
     ([733844b](https://gitlab.miracum.org/miracum/misc/diztools/tree/733844b0485b6b4fdc95bd34411d513bd4b98e90))
 -   news.md now with autonewsmd package
@@ -93,7 +95,7 @@
     ([c40e2fb](https://gitlab.miracum.org/miracum/misc/diztools/tree/c40e2fb7828a5b6bbb5053f16bdf748654e07d65))
 
 Full set of changes:
-[`v0.0.4...733844b`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...733844b)
+[`v0.0.4...4a5ce5e`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...4a5ce5e)
 
 ## v0.0.4 (2022-03-03)
 
