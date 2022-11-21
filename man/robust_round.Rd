@@ -7,11 +7,16 @@
 robust_round(x, digits = 2, thousands_separator = "", decimal_separator = ".")
 }
 \arguments{
+\item{x}{(numeric) The numeric input vector to round.}
+
 \item{digits}{(int, optional) The number of digits after the decimal
 separator to round to.}
 
 \item{thousands_separator}{(string, optional) Used as mark between every 3
 decimals before the decimal point.}
+
+\item{decimal_separator}{(string, optional) The character to be used to
+indicate the numeric decimal point.}
 }
 \value{
 Rounded numbers as string.

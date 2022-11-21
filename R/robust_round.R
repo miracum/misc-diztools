@@ -16,11 +16,13 @@
 
 #' @title Round numbers without problems.
 #' @description Round numbers without problems.
-#'
+#' @param x (numeric) The numeric input vector to round.
 #' @param digits (int, optional) The number of digits after the decimal
 #'   separator to round to.
 #' @param thousands_separator (string, optional) Used as mark between every 3
 #'   decimals before the decimal point.
+#' @param decimal_separator (string, optional) The character to be used to
+#'   indicate the numeric decimal point.
 #' @return Rounded numbers as string.
 #' @examples{
 #'   robust_round(c(1.234567, 987123.987654321))
