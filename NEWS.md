@@ -1,6 +1,13 @@
 # DIZtools NEWS
 
-## Unreleased (2022-11-21)
+## Unreleased (2023-01-23)
+
+#### Other changes
+
+-   fixed cran checks url
+    ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
+
+## v0.0.6 (2022-11-21)
 
 #### New features
 
@@ -10,19 +17,6 @@
     ([144fdf3](https://gitlab.miracum.org/miracum/misc/diztools/tree/144fdf3c2a288e6f8d9a37cd113632f76375184e))
 -   added new function `number_to_position()`
     ([50d44ba](https://gitlab.miracum.org/miracum/misc/diztools/tree/50d44bae0603b654cc8a6a3b78599609c490662b))
--   added logo
-    ([09c809d](https://gitlab.miracum.org/miracum/misc/diztools/tree/09c809d6d3d6cd531e2d9cd1d413701fa9f85e4d))
--   added function `check_if_unique_rows`
-    ([bd648a5](https://gitlab.miracum.org/miracum/misc/diztools/tree/bd648a5975d7bbea615e4b172515cd96a52732db))
-
-#### Bug fixes
-
--   `is.empty()` can now handle lists in lists
-    ([41a2ba7](https://gitlab.miracum.org/miracum/misc/diztools/tree/41a2ba7ed1add31bea23c79d6f0f382cf8a4551f))
--   importing data.table now for check\_if\_unique\_rows
-    ([c0f8b69](https://gitlab.miracum.org/miracum/misc/diztools/tree/c0f8b692090a7a40bb50d8024582e891aeb5aea4))
--   feedback function broke after calling `close_all_connections()`
-    ([9938688](https://gitlab.miracum.org/miracum/misc/diztools/tree/9938688448a29e3a423d1c0afbb260357cd926c4))
 
 #### Refactorings
 
@@ -57,10 +51,6 @@
     ([25af516](https://gitlab.miracum.org/miracum/misc/diztools/tree/25af5163f282d1bcc01e573020904a921be30596))
 -   updated news
     ([bd90fea](https://gitlab.miracum.org/miracum/misc/diztools/tree/bd90fea1b1605dcd4733108bc55781958edbcc24))
--   added default parameter for stop
-    ([784a99e](https://gitlab.miracum.org/miracum/misc/diztools/tree/784a99ee041a3af61ab29abdba7bcaf131509166))
--   updated news
-    ([85ffca4](https://gitlab.miracum.org/miracum/misc/diztools/tree/85ffca4330fb28ddb8752ddb551ce9ceb5f5e4cc))
 
 #### Other changes
 
@@ -78,6 +68,37 @@
     ([c0c3435](https://gitlab.miracum.org/miracum/misc/diztools/tree/c0c3435d6a0feaec4b313ea25cfa09706b137f01))
 -   new dev version
     ([1106ff6](https://gitlab.miracum.org/miracum/misc/diztools/tree/1106ff6ce31297ec014c8aa45d31273a291fc38d))
+
+Full set of changes:
+[`v0.0.5...v0.0.6`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...v0.0.6)
+
+## v0.0.5 (2022-05-18)
+
+#### New features
+
+-   added logo
+    ([09c809d](https://gitlab.miracum.org/miracum/misc/diztools/tree/09c809d6d3d6cd531e2d9cd1d413701fa9f85e4d))
+-   added function `check_if_unique_rows`
+    ([bd648a5](https://gitlab.miracum.org/miracum/misc/diztools/tree/bd648a5975d7bbea615e4b172515cd96a52732db))
+
+#### Bug fixes
+
+-   `is.empty()` can now handle lists in lists
+    ([41a2ba7](https://gitlab.miracum.org/miracum/misc/diztools/tree/41a2ba7ed1add31bea23c79d6f0f382cf8a4551f))
+-   importing data.table now for check\_if\_unique\_rows
+    ([c0f8b69](https://gitlab.miracum.org/miracum/misc/diztools/tree/c0f8b692090a7a40bb50d8024582e891aeb5aea4))
+-   feedback function broke after calling `close_all_connections()`
+    ([9938688](https://gitlab.miracum.org/miracum/misc/diztools/tree/9938688448a29e3a423d1c0afbb260357cd926c4))
+
+#### Docs
+
+-   added default parameter for stop
+    ([784a99e](https://gitlab.miracum.org/miracum/misc/diztools/tree/784a99ee041a3af61ab29abdba7bcaf131509166))
+-   updated news
+    ([85ffca4](https://gitlab.miracum.org/miracum/misc/diztools/tree/85ffca4330fb28ddb8752ddb551ce9ceb5f5e4cc))
+
+#### Other changes
+
 -   new release `v0.0.5`
     ([0aa2060](https://gitlab.miracum.org/miracum/misc/diztools/tree/0aa2060d445db21e559d825c039705f2dd0c27ab))
 -   updated news.md
@@ -103,7 +124,7 @@
     ([c40e2fb](https://gitlab.miracum.org/miracum/misc/diztools/tree/c40e2fb7828a5b6bbb5053f16bdf748654e07d65))
 
 Full set of changes:
-[`v0.0.4...9c856db`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...9c856db)
+[`v0.0.4...v0.0.5`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...v0.0.5)
 
 ## v0.0.4 (2022-03-03)
 

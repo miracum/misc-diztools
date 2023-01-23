@@ -348,8 +348,11 @@ feedback_to_logfile <-
     path_with_file <- file.path(logfile_dir, "logfile.log") %>%
       normalizePath(mustWork = FALSE)
 
-    if (!file.exists(path_with_file)) {
+    if (!dir.exists(logfile_dir)) {
       dir.create(logfile_dir, recursive = TRUE)
+    }
+
+    if (!file.exists(path_with_file)) {
       file.create(path_with_file)
     }
 
