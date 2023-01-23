@@ -53,7 +53,7 @@
 #'   Recommended with length 10.
 #'   String to find the message in the code.
 #'   E.g. 10-digit random hex from
-#'   \url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}
+#'   \url{https://onlinetools.com/random/generate-random-hexadecimal-numbers}
 #' @param logfile_dir (Optional, String, default: "tempdir()")
 #'   The absolute path to folder where the logfile will be stored.
 #' @param headless (Optional, Boolean, default: TRUE)

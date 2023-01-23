@@ -16,7 +16,7 @@ E.g. "Warning", "Error". Default: "Info"}
 Recommended with length 10.
 String to find the message in the code.
 E.g. 10-digit random hex from
-\url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}}
+\url{https://onlinetools.com/random/generate-random-hexadecimal-numbers}}
 
 \item{prefix}{Prefix (Optional, String, default: "")
 This is useful if print_this is an array/list.

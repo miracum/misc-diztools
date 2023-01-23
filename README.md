@@ -54,4 +54,4 @@ I2B2_PASSWORD=password
 ## More Infos
 
 * about MIRACUM: <https://www.miracum.org/>
-* about the Medical Informatics Initiative: <https://www.medizininformatik-initiative.de/index.php/de>
+* about the Medical Informatics Initiative: <https://www.medizininformatik-initiative.de/de/start>

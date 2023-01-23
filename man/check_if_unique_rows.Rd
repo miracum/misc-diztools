@@ -24,7 +24,7 @@ check_if_unique_rows(
 Recommended with length 10.
 String to find the message in the code.
 E.g. 10-digit random hex from
-\url{https://onlinerandomtools.com/generate-random-hexadecimal-numbers}}
+\url{https://onlinetools.com/random/generate-random-hexadecimal-numbers}}
 
 \item{stop}{(boolean, default = FALSE) Should the function call
 \code{stop()} if there are non-unique rows in the data?}
