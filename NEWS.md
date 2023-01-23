@@ -2,10 +2,18 @@
 
 ## Unreleased (2023-01-23)
 
+#### Bug fixes
+
+-   removed warning in `feedback` function if dir for log already exists
+    ([a2298ea](https://gitlab.miracum.org/miracum/misc/diztools/tree/a2298ea07beba822795d73cf27f4ecad57f5d5f8))
+
 #### Other changes
 
 -   fixed cran checks url
     ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
+
+Full set of changes:
+[`v0.0.6...a2298ea`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...a2298ea)
 
 ## v0.0.6 (2022-11-21)
 
