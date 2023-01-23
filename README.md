@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version-ago/DIZtools)](https://cran.r-project.org/package=DIZtools)
-[![Cran Checks](https://cranchecks.info/badges/worst/DIZtools)](https://cran.r-project.org/web/checks/check_results_DIZtools.html)
+[![Cran Checks](https://badges.cranchecks.info/worst/DIZtools.svg)](https://cran.r-project.org/web/checks/check_results_DIZtools.html)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/DIZtools?color=blue)](https://cran.r-project.org/package=DIZtools)
 [![](http://cranlogs.r-pkg.org/badges/last-month/DIZtools?color=blue)](https://cran.r-project.org/package=DIZtools)
 [![Dependencies](https://tinyverse.netlify.com/badge/DIZtools)](https://cran.r-project.org/package=DIZtools)

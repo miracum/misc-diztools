@@ -1,9 +1,11 @@
 # DIZtools NEWS
 
-## Unreleased (2022-09-26)
+## Unreleased (2022-11-21)
 
 #### New features
 
+-   added `robust_round` function
+    ([35d29db](https://gitlab.miracum.org/miracum/misc/diztools/tree/35d29dbc158ce7560fc99f52d96ed99e206cc841))
 -   added `paste2` function with `collapse_last` argument
     ([144fdf3](https://gitlab.miracum.org/miracum/misc/diztools/tree/144fdf3c2a288e6f8d9a37cd113632f76375184e))
 -   added new function `number_to_position()`
@@ -47,6 +49,8 @@
 
 #### Docs
 
+-   Added documentation of function parameter in `robust_round`
+    ([9c856db](https://gitlab.miracum.org/miracum/misc/diztools/tree/9c856db6b109b2edaba02e82cedbdbc59723161a))
 -   added default arguments from `paste` also to `paste2`
     ([6886525](https://gitlab.miracum.org/miracum/misc/diztools/tree/688652517403ba3860760dea565109c9bbabb8af))
 -   updated news.md
@@ -60,6 +64,10 @@
 
 #### Other changes
 
+-   preparing new release 0.0.6
+    ([c64e7c9](https://gitlab.miracum.org/miracum/misc/diztools/tree/c64e7c9f7eb3869c9cb8348cf7db7587cbc67046))
+-   updated news.md
+    ([8b5294d](https://gitlab.miracum.org/miracum/misc/diztools/tree/8b5294d343c9e74713622a412056d02c5bf7fd89))
 -   introducing zzz.r
     ([4a5ce5e](https://gitlab.miracum.org/miracum/misc/diztools/tree/4a5ce5e766faa7956601fa77baeafb687ccf3e2f))
 -   updated news.md
@@ -95,7 +103,7 @@
     ([c40e2fb](https://gitlab.miracum.org/miracum/misc/diztools/tree/c40e2fb7828a5b6bbb5053f16bdf748654e07d65))
 
 Full set of changes:
-[`v0.0.4...4a5ce5e`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...4a5ce5e)
+[`v0.0.4...9c856db`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...9c856db)
 
 ## v0.0.4 (2022-03-03)
 
