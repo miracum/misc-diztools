@@ -7,6 +7,18 @@
 -   added new function `file_lines_to_list()`
     ([2a4f6cf](https://gitlab.miracum.org/miracum/misc/diztools/tree/2a4f6cf6bbc50e8ba82afb5836853a4554e57534))
 
+#### Other changes
+
+-   updated news.md
+    ([9f21723](https://gitlab.miracum.org/miracum/misc/diztools/tree/9f21723c84982702c75b39258df6ec8791506fdc))
+-   incremented copyright for 2023
+    ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
+
+Full set of changes:
+[`v0.0.7...9f21723`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...9f21723)
+
+## v0.0.7 (2023-01-23)
+
 #### Bug fixes
 
 -   removed warning in `feedback` function if dir for log already exists
@@ -19,15 +31,13 @@
 
 #### Other changes
 
--   incremented copyright for 2023
-    ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 -   preparing new release `0.0.7`
     ([b24f860](https://gitlab.miracum.org/miracum/misc/diztools/tree/b24f86087bcd922ebbb9ec4c82ae72b5359b046b))
 -   fixed cran checks url
     ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
 
 Full set of changes:
-[`v0.0.6...2a4f6cf`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...2a4f6cf)
+[`v0.0.6...v0.0.7`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...v0.0.7)
 
 ## v0.0.6 (2022-11-21)
 
