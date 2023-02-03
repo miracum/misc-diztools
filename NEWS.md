@@ -1,19 +1,28 @@
 # DIZtools NEWS
 
-## Unreleased (2023-01-23)
+## Unreleased (2023-02-03)
 
 #### Bug fixes
 
 -   removed warning in `feedback` function if dir for log already exists
     ([a2298ea](https://gitlab.miracum.org/miracum/misc/diztools/tree/a2298ea07beba822795d73cf27f4ecad57f5d5f8))
 
+#### Docs
+
+-   updated urls
+    ([330810e](https://gitlab.miracum.org/miracum/misc/diztools/tree/330810e30030f2679a39fe4813dc7e8bc7300af9))
+
 #### Other changes
 
+-   incremented copyright for 2023
+    ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
+-   preparing new release `0.0.7`
+    ([b24f860](https://gitlab.miracum.org/miracum/misc/diztools/tree/b24f86087bcd922ebbb9ec4c82ae72b5359b046b))
 -   fixed cran checks url
     ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
 
 Full set of changes:
-[`v0.0.6...a2298ea`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...a2298ea)
+[`v0.0.6...371b107`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...371b107)
 
 ## v0.0.6 (2022-11-21)
 
