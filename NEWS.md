@@ -10,12 +10,14 @@
 #### Other changes
 
 -   updated news.md
+    ([b609269](https://gitlab.miracum.org/miracum/misc/diztools/tree/b609269af0bbbfb12f5a93bb3cd43f45121fcca2))
+-   updated news.md
     ([9f21723](https://gitlab.miracum.org/miracum/misc/diztools/tree/9f21723c84982702c75b39258df6ec8791506fdc))
 -   incremented copyright for 2023
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...9f21723`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...9f21723)
+[`v0.0.7...b609269`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...b609269)
 
 ## v0.0.7 (2023-01-23)
 
