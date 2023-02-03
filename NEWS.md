@@ -2,6 +2,11 @@
 
 ## Unreleased (2023-02-03)
 
+#### New features
+
+-   added new function `file_lines_to_list()`
+    ([2a4f6cf](https://gitlab.miracum.org/miracum/misc/diztools/tree/2a4f6cf6bbc50e8ba82afb5836853a4554e57534))
+
 #### Bug fixes
 
 -   removed warning in `feedback` function if dir for log already exists
@@ -22,7 +27,7 @@
     ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
 
 Full set of changes:
-[`v0.0.6...371b107`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...371b107)
+[`v0.0.6...2a4f6cf`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...2a4f6cf)
 
 ## v0.0.6 (2022-11-21)
 
