@@ -19,10 +19,7 @@
 #' @description Function to quickly get the current time stamp without
 #'   need to handle format-options etc.
 #'
-#' @param no_spaces Boolean. Default = `FALSE`. Specifies whether the output
-#'   can contain spaces or not. E.g. if the output is for human reading,
-#'   `no_spaces = FALSE` is a good option. As suffix for file names
-#'   (e.g. logfiles), `no_spaces = TRUE` might be a good option.
+#' @inheritParams pretty_timestamp
 #' @return The current timestamp in always the same format.
 #'#'
 #' @examples
@@ -36,9 +33,5 @@
 #' @export
 #'
 get_current_timestamp <- function(no_spaces = FALSE) {
-  if (no_spaces) {
-    return(format(Sys.time(), format = "%Y-%m-%d-%H%M%S"))
-  } else {
-    return(format(Sys.time(), format = "%d. %b %Y - %H:%M UTC"))
-  }
+  return(pretty_timestamp(timestamp = Sys.time(), no_spaces = no_spaces))
 }

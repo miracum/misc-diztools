@@ -7,7 +7,15 @@
 \usage{
 time_diff_print(
   older_timestamp,
-  newer_timestamp,
+  newer_timestamp = NULL,
+  iteration = NULL,
+  iterations = NULL,
+  remaining_time = TRUE,
+  eta = TRUE,
+  prefix_iteration = "Iteration ",
+  prefix_time_elapsed = "Time elapsed: ",
+  prefix_time_remaining = "Remaining: ",
+  prefix_eta = "ETA: ",
   digits = 2,
   thousands_separator = "",
   decimal_separator = "."
@@ -16,7 +24,22 @@ time_diff_print(
 \arguments{
 \item{older_timestamp}{(POSIXct) Start time.}
 
-\item{newer_timestamp}{(POSIXct) End time.}
+\item{newer_timestamp}{(POSIXct, Optional) End time. If not set, the current
+time will be used.}
+
+\item{iteration}{(Numeric, Optional) The current iteration if also the time
+process within all iterations additional to the elapsed time is of
+interest.}
+
+\item{iterations}{(Numeric, Optional) The total number of iterations.}
+
+\item{remaining_time}{(Boolean, Optional, Default = TRUE) Should the
+estimated time needed to finish all iterations be displayed?}
+
+\item{eta}{(Boolean, Optional, Default = TRUE) Should the
+estimated time of arrival needed to finish all iterations be displayed?}
+
+\item{prefix_iteration, prefix_time_elapsed, prefix_time_remaining, prefix_eta}{Prefixes for the output string.}
 
 \item{digits}{(int, optional) The number of digits after the decimal
 separator to round to.}
