@@ -23,7 +23,7 @@
 #' @return A list with one element per row of the input file
 #' @export
 #'
-time_diff_print = function(older_timestamp,
+time_diff_print <- function(older_timestamp,
                            newer_timestamp,
                            digits = 2,
                            thousands_separator = "",

@@ -11,6 +11,8 @@
 
 #### Other changes
 
+-   upated news.md
+    ([6ae141d](https://gitlab.miracum.org/miracum/misc/diztools/tree/6ae141dae6a13831fd0e1a49d951eb0e1d0c6e06))
 -   updated news.md
     ([b609269](https://gitlab.miracum.org/miracum/misc/diztools/tree/b609269af0bbbfb12f5a93bb3cd43f45121fcca2))
 -   updated news.md
@@ -19,7 +21,7 @@
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...9910d07`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...9910d07)
+[`v0.0.7...6ae141d`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...6ae141d)
 
 ## v0.0.7 (2023-01-23)
 
