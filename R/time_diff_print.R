@@ -17,6 +17,9 @@
 #' @title Calculate time difference of two timestamps, round the value and
 #'   return a string with suiting unit.
 #' @description Create string with time difference in suitable unit.
+#'   Additional automatically add the remaining time depending on the position
+#'   in an iteration process, or the estimated time of arrival by just
+#'   providing the current and total iteration step(s).
 #' @param older_timestamp (POSIXct) Start time.
 #' @param newer_timestamp (POSIXct, Optional) End time. If not set, the current
 #'   time will be used.
@@ -32,6 +35,14 @@
 #'   Prefixes for the output string.
 #' @inheritParams robust_round
 #' @return A list with one element per row of the input file
+#' @examples
+#' ## Since no second timestamp is provided, the current time
+#' ## (currently 2023-03-08) will be assumed:
+#' DIZtools::time_diff_print("2023-01-01 10:00")
+#' #> [1] "Time elapsed: 66.20 days"
+#' DIZtools::time_diff_print("2023-01-01 10:00", iteration = 7, iterations = 10)
+#' #> [1] "Iteration 7 of 10 (70.00 %), Time elapsed: 66.20 days
+#' #>     (Remaining: ~ 28.37 days, ETA: ~ 05. Apr 2023 - 23:42 UTC)"
 #' @export
 #'
 time_diff_print <- function(older_timestamp,

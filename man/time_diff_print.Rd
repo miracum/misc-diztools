@@ -55,4 +55,16 @@ A list with one element per row of the input file
 }
 \description{
 Create string with time difference in suitable unit.
+  Additional automatically add the remaining time depending on the position
+  in an iteration process, or the estimated time of arrival by just
+  providing the current and total iteration step(s).
+}
+\examples{
+## Since no second timestamp is provided, the current time
+## (currently 2023-03-08) will be assumed:
+DIZtools::time_diff_print("2023-01-01 10:00")
+#> [1] "Time elapsed: 66.20 days"
+DIZtools::time_diff_print("2023-01-01 10:00", iteration = 7, iterations = 10)
+#> [1] "Iteration 7 of 10 (70.00 \%), Time elapsed: 66.20 days
+#>     (Remaining: ~ 28.37 days, ETA: ~ 05. Apr 2023 - 23:42 UTC)"
 }

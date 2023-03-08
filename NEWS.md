@@ -4,6 +4,8 @@
 
 #### New features
 
+-   added remaining time, eta and iterations to `time_diff_print()`
+    ([c164d19](https://gitlab.miracum.org/miracum/misc/diztools/tree/c164d194a84f6aaebdbbe2673aeb2129d6fa77d1))
 -   added new function `time_diff_print`
     ([9910d07](https://gitlab.miracum.org/miracum/misc/diztools/tree/9910d07d48a843570ec13e08a09447a23d290125))
 -   added new function `file_lines_to_list()`
@@ -26,7 +28,7 @@
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...b1960af`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...b1960af)
+[`v0.0.7...c164d19`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...c164d19)
 
 ## v0.0.7 (2023-01-23)
 
