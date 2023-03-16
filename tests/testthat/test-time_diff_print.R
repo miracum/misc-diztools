@@ -49,6 +49,7 @@ test_that(desc = "Test `time_diff_print()`",
             testthat::expect_true(object = {
               res <- time_diff_print(
                 older_timestamp = as.POSIXct("2023-01-01 10:00:00"),
+                newer_timestamp = as.POSIXct("2023-01-01 10:30:00"),
                 iteration = "9",
                 iterations = "10",
                 digits = 1
@@ -56,7 +57,7 @@ test_that(desc = "Test `time_diff_print()`",
               all(
                 startsWith(
                   res,
-                  "Iteration 9 of 10 (90.0 %), Time elapsed: 66.2 days (Remaining: ~ 7.4 days, ETA: ~ "
+                  "Iteration 9 of 10 (90.0 %), Time elapsed: 30.0 mins (Remaining: ~ 3.3 mins, ETA: ~ "
                 ),
                 endsWith(res, " UTC)")
               )
@@ -66,6 +67,7 @@ test_that(desc = "Test `time_diff_print()`",
             testthat::expect_true(object = {
               res <- time_diff_print(
                 older_timestamp = as.POSIXct("2023-01-01 10:00:00"),
+                newer_timestamp = as.POSIXct("2023-03-02 10:50:00"),
                 iteration = "9",
                 iterations = "10",
                 digits = 1,
@@ -73,7 +75,7 @@ test_that(desc = "Test `time_diff_print()`",
               )
               all(
                 startsWith(res,
-                           "Iteration 9 of 10 (90.0 %), Time elapsed: 66.2 days ("),
+                           "Iteration 9 of 10 (90.0 %), Time elapsed: 60.0 days (ETA: ~ "),
                 !grepl(
                   pattern = "Remaining",
                   x = res,
@@ -92,12 +94,13 @@ test_that(desc = "Test `time_diff_print()`",
             testthat::expect_equal(
               object = time_diff_print(
                 older_timestamp = as.POSIXct("2023-01-01 10:00:00"),
+                newer_timestamp = as.POSIXct("2023-01-02 11:20:00"),
                 iteration = "9",
                 iterations = "10",
                 digits = 1,
                 eta = FALSE
               ),
-              expected = "Iteration 9 of 10 (90.0 %), Time elapsed: 66.2 days (Remaining: ~ 7.4 days)"
+              expected = "Iteration 9 of 10 (90.0 %), Time elapsed: 1.1 days (Remaining: ~ 0.1 days)"
             )
 
 
@@ -105,13 +108,14 @@ test_that(desc = "Test `time_diff_print()`",
             testthat::expect_equal(
               object = time_diff_print(
                 older_timestamp = as.POSIXct("2023-01-01 10:00:00"),
+                newer_timestamp = as.POSIXct("2023-01-02 09:20:00"),
                 iteration = "9",
                 iterations = "10",
                 digits = 1,
                 remaining_time = FALSE,
                 eta = FALSE
               ),
-              expected = "Iteration 9 of 10 (90.0 %), Time elapsed: 66.2 days"
+              expected = "Iteration 9 of 10 (90.0 %), Time elapsed: 23.3 hours"
             )
 
           })
