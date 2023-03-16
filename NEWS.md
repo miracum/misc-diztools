@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2023-03-16)
+## v0.0.8 (2023-03-16)
 
 #### New features
 
@@ -25,6 +25,8 @@
 
 #### Other changes
 
+-   preparation for CRAN release `0.0.8`
+    ([80ea30f](https://gitlab.miracum.org/miracum/misc/diztools/tree/80ea30f746119b2f0df602f62aaf1e6bcde5db9c))
 -   upated news.md
     ([6ae141d](https://gitlab.miracum.org/miracum/misc/diztools/tree/6ae141dae6a13831fd0e1a49d951eb0e1d0c6e06))
 -   updated news.md
@@ -35,7 +37,7 @@
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...4d2db0b`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...4d2db0b)
+[`v0.0.7...v0.0.8`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...v0.0.8)
 
 ## v0.0.7 (2023-01-23)
 
