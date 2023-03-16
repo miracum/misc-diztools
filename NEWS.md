@@ -1,6 +1,6 @@
 # DIZtools NEWS
 
-## Unreleased (2023-03-08)
+## Unreleased (2023-03-16)
 
 #### New features
 
@@ -13,8 +13,15 @@
 
 #### Tests
 
+-   fixed time dependent test results
+    ([4d2db0b](https://gitlab.miracum.org/miracum/misc/diztools/tree/4d2db0bd44736f36349a4faa6772d986cab2476d))
 -   added unittest for `time_diff_print`
     ([b1960af](https://gitlab.miracum.org/miracum/misc/diztools/tree/b1960af3205da0b05d8415d8119c0d8ba981b79e))
+
+#### Docs
+
+-   added parameter description for `time_diff_print()`
+    ([e026879](https://gitlab.miracum.org/miracum/misc/diztools/tree/e026879c064486e25a13c589af04f85824fde52c))
 
 #### Other changes
 
@@ -28,7 +35,7 @@
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...c164d19`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...c164d19)
+[`v0.0.7...4d2db0b`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...4d2db0b)
 
 ## v0.0.7 (2023-01-23)
 
