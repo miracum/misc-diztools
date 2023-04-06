@@ -5,7 +5,7 @@ editor_options:
 ---
 
 <!-- !!! ############################################################ !!! -->
-<!-- This page is auto generated from `README.Rmd`. -->
+<!-- This page is auto generated from `README.qmd`. -->
 <!-- Don't change the .md file manually! -->
 <!-- !!! ############################################################ !!! -->
 
@@ -31,24 +31,19 @@ The R package `DIZtools` provides utility functions used for the R package devel
 
 You can install `DIZtools` directly from CRAN:
 
-````{verbatim, lang = "markdown"}
-
-```r
+```{r}
+#| eval: false
 install.packages("DIZtools")
 ```
 
-````
 
 The development version can be installed using
 
-````{verbatim, lang = "markdown"}
-
-```r
+```{r}
+#| eval: false
 install.packages("remotes")
 remotes::install_github("miracum/misc-diztools", ref = "dev")
 ```
-
-````
 
 ## Contained functions
 
