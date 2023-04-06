@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_current_timestamp.R
 \name{get_current_timestamp}
 \alias{get_current_timestamp}
-\title{Quickly get the current time stamp}
+\title{Quickly get the current time stamp without the
+  need to handle format-options etc.}
 \usage{
 get_current_timestamp(no_spaces = FALSE)
 }

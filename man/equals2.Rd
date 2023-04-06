@@ -2,7 +2,8 @@
 % Please edit documentation in R/equals2.R
 \name{equals2}
 \alias{equals2}
-\title{Compare two elements and return true if both elements are the same.}
+\title{Robust compare two elements and return true if both elements are
+  the same. False otherwise. No `NA` or `NULL`.}
 \usage{
 equals2(v1, v2)
 }

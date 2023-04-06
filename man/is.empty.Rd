@@ -2,7 +2,7 @@
 % Please edit documentation in R/is.empty.R
 \name{is.empty}
 \alias{is.empty}
-\title{Empty Value}
+\title{Check for empty/`NA`/`NULL`/`NaN`/etc. values.}
 \source{
 \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from `rapportools::is.empty()`}
 }

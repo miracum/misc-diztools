@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title clean_path helper function
+#' @title Clean paths to surely have a tailing slash or not.
 #'
 #' @description Function to clean paths to surely have a tailing slash or not.
 #'

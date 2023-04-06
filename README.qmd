@@ -45,30 +45,79 @@ install.packages("remotes")
 remotes::install_github("miracum/misc-diztools", ref = "dev")
 ```
 
-## Contained functions
+## Exported functions
 
 ```{r echo=FALSE, include=FALSE}
-files <- list.files(path = "./R", pattern = ".R$")
+base_path <- "./R/"
+key_to_get_text_from <- "title"
+must_include_keys <- "export"
 
-function_string <-
-  paste0(
-    "- ",
-    paste0("[`",
-       files |> gsub(
-         pattern = ".R$",
-         replacement = "",
-         x = _
-       ),
-       "`](./R/",
-       files,
-       ")") |>
-      paste(collapse = "\n- ") ,
-    ""
-  )
+pattern_for_key_to_get_text_from <- paste0("^(#' @", key_to_get_text_from," )")
+files <- list.files(path = base_path, pattern = ".R$")
+
+texts <- lapply(files, function(filename){
+  content <- DIZtools::file_lines_to_list(paste0(base_path, filename))
+
+  ## Stop if no line starts with `#' @MUST_INCLUDE_KEY `:
+  for (key in must_include_keys) {
+    if (isFALSE(any(grepl(
+      pattern = paste0("^(#' @", key, ")"), x = content
+    )))) {
+      return(NA)
+    }
+  }
+  
+## Get line number of line starting with `#' @ELEMENT `:
+line_start <- which(grepl(pattern = pattern_for_key_to_get_text_from, x = content))[[1]]
+
+## Get line number of the following line starting with `#' @` indicating that
+## there (minus one) is the end of the title:
+line_end <- which(grepl(pattern = "^(#' @)", x = content))
+line_end <- line_end[line_end > line_start][[1]] - 1
+
+final_text <-
+  content[line_start:line_end] |>
+  gsub(pattern = pattern_for_key_to_get_text_from,
+       replacement = "",
+       x = _) |>
+  gsub(pattern = "^(#')",
+       replacement = "",
+       x = _) |>
+  DIZtools::trim.space() |>
+  paste(collapse = " ") |>
+  DIZtools::trim.space()
+return(final_text)
+})
+
+external_function_ids <- which(!is.na(texts))
+internal_function_ids <- setdiff(1:length(files), external_function_ids)
+
+get_function_string <- function(files, texts){
+  ## Replace NAs with empty string:
+  texts <- lapply(texts, function(x){ifelse(is.na(x), "", paste0(": ", x))})
+  
+  return(paste0("- ",
+         paste0(
+           "[`",
+           files |> gsub(
+             pattern = ".R$",
+             replacement = "",
+             x = _
+           ),
+           "`](./R/",
+           files,
+           ")",
+           texts
+         ) |>
+           paste(collapse = "\n- ")))
+}
 ```
 
-`r function_string`
+`r get_function_string(files = files[external_function_ids], texts = texts[external_function_ids])`
 
+## Internal functions
+
+`r get_function_string(files = files[internal_function_ids], texts = texts[internal_function_ids])`
 
 ## More Infos
 

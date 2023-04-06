@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Empty Value
+#' @title Check for empty/`NA`/`NULL`/`NaN`/etc. values.
 #'
 #' @description Rails-inspired helper that checks if vector values are "empty",
 #'   i.e. if it's: \code{NULL}, zero-length, \code{NA}, \code{NaN},

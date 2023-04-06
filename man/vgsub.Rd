@@ -2,7 +2,7 @@
 % Please edit documentation in R/vgsub.R
 \name{vgsub}
 \alias{vgsub}
-\title{Vectorised String Replacement}
+\title{Vectorised string replacement.}
 \source{
 \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from package `rapportools`}
 }

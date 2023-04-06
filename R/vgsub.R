@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Vectorised String Replacement
+#' @title Vectorised string replacement.
 #'
 #' @description A simple wrapper for \code{\link{gsub}} that replaces all
 #'   patterns from \code{pattern} argument with ones in \code{replacement}

@@ -14,7 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Compare two elements and return true if both elements are the same.
+#' @title Robust compare two elements and return true if both elements are
+#'   the same. False otherwise. No `NA` or `NULL`.
 #'
 #' @description The base-R function `==` is not working in an intended
 #'   way for NAs and boolean. This function fixes this.

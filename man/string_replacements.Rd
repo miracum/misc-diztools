@@ -2,7 +2,7 @@
 % Please edit documentation in R/string_replacements.R
 \name{string_replacements}
 \alias{string_replacements}
-\title{Clean string with a given set of replacements}
+\title{Clean string with a given set of replacements.}
 \usage{
 string_replacements(
   input,

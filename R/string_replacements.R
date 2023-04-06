@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Clean string with a given set of replacements
+#' @title Clean string with a given set of replacements.
 #' @description This function provides the functionality to clean a string
 #'   with a given set of replacements. This is e.g. useful to create
 #'   filenames or paths that are not allowed to contain spaces.

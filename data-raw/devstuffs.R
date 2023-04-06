@@ -34,7 +34,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.8.9001")
+my_desc$set_version("0.0.8.9002")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -168,6 +168,7 @@ usethis::use_git_ignore("!/man/")
 usethis::use_git_ignore("!NAMESPACE")
 usethis::use_git_ignore("!/R/")
 usethis::use_git_ignore("!/README.md")
+usethis::use_git_ignore("!/README.qmd")
 usethis::use_git_ignore("!/tests/")
 usethis::use_git_ignore("/.Rhistory")
 usethis::use_git_ignore("!/*.Rproj")
@@ -245,5 +246,7 @@ an$write(force = TRUE)
 #   white_around_sticker = FALSE,
 #   asp = 1
 # )
+
+quarto::quarto_render(input = "./README.qmd")
 
 # nolint end

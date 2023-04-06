@@ -2,7 +2,7 @@
 % Please edit documentation in R/trim.space.R
 \name{trim.space}
 \alias{trim.space}
-\title{Trim Spaces}
+\title{Trim Spaces of a string.}
 \source{
 \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from `rapportools::is.empty()`}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/clean_path_name.R
 \name{clean_path_name}
 \alias{clean_path_name}
-\title{clean_path helper function}
+\title{Clean paths to surely have a tailing slash or not.}
 \usage{
 clean_path_name(pathname, remove.slash = FALSE)
 }

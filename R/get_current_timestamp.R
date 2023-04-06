@@ -14,7 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Quickly get the current time stamp
+#' @title Quickly get the current time stamp without the
+#'   need to handle format-options etc.
 #'
 #' @description Function to quickly get the current time stamp without
 #'   need to handle format-options etc.

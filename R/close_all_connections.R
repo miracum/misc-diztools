@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Cleanup function to unset/close all open connections
+#' @title Unset/close all open connections
 #' @description This function is meant to be called at the end of a
 #'   run of the app. It will close all open connections to files
 #'   or databases. This closes ALL connections. Not just the ones

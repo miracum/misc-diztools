@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Trim Spaces
+#' @title Trim Spaces of a string.
 #'
 #' @description Removes leading and/or trailing space(s) from a character
 #'   vector. By default, it removes both leading and trailing spaces.
