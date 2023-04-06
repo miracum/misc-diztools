@@ -16,6 +16,7 @@
 !NAMESPACE
 !/R/
 !/README.md
+!/README.Rmd
 !/tests/
 /.Rhistory
 !/*.Rproj
