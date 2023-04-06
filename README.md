@@ -51,16 +51,17 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
 
 ## Exported functions
 
--   [`assign_to_R_env()`](./R/assign_to_R_env.R): assign_to_R_env
+-   [`assign_to_R_env()`](./R/assign_to_R_env.R): Add variable to R
+    environment (in contrast to system environment).
 -   [`check_if_unique_rows()`](./R/check_if_unique_rows.R): Takes a
     data.table dataset and checks if for each unique element in a
     specified column there is exaclty one row.
 -   [`clean_path_name()`](./R/clean_path_name.R): Clean paths to surely
     have a tailing slash or not.
 -   [`clear()`](./R/clear.R): Clean the console and
-    environment-variables
+    environment-variables.
 -   [`close_all_connections()`](./R/close_all_connections.R):
-    Unset/close all open connections
+    Unset/close all open connections.
 -   [`equals2()`](./R/equals2.R): Robust compare two elements and return
     true if both elements are the same. False otherwise. No `NA` or
     `NULL`.
@@ -69,7 +70,7 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
 -   [`file_lines_to_list()`](./R/file_lines_to_list.R): Read in lines
     from a file and store it in a list.
 -   [`firstup()`](./R/firstup.R): Converts the first letter of the input
-    string to uppercase
+    string to uppercase.
 -   [`format_POSIXct()`](./R/format_POSIXct.R): Formats a given POSIXct
     timestamp without the need of manually specifing format parameters.
 -   [`get_config()`](./R/get_config.R): Reads a config yaml file and
@@ -81,7 +82,8 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
     matches a given date format.
 -   [`is.empty()`](./R/is.empty.R): Check for
     empty/`NA`/`NULL`/`NaN`/etc. values.
--   [`notin()`](./R/notin.R): notin helper function
+-   [`notin()`](./R/notin.R): notin helper function. Opposite of `in`
+    function.
 -   [`number_to_position()`](./R/number_to_position.R): Converts an
     integer number to its “verbal position”. 1 –\> “1st”, 2 –\> “2nd”, 3
     –\> “3rd”, 4 –\> “4th”, …

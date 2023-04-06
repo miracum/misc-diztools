@@ -199,10 +199,7 @@ usethis::use_git_ignore("!/cran-comments.md")
 # tidy description
 usethis::use_tidy_description()
 
-
-badger::badge_cran_download("DIZtools", "grand-total", "blue")
-badger::badge_cran_download("DIZtools", "last-month", "blue")
-badger::badge_dependencies("DIZtools")
+quarto::quarto_render(input = "./README.qmd")
 
 # create NEWS.md using the python-package "auto-changelog" (must be installed)
 # https://www.conventionalcommits.org/en/v1.0.0/
@@ -222,6 +219,10 @@ badger::badge_dependencies("DIZtools")
 an <- autonewsmd::autonewsmd$new(repo_name = packagename)
 an$generate()
 an$write(force = TRUE)
+
+badger::badge_cran_download("DIZtools", "grand-total", "blue")
+badger::badge_cran_download("DIZtools", "last-month", "blue")
+badger::badge_dependencies("DIZtools")
 
 #
 # imgurl <- path.expand("~/development/Rpackages/bg1.jpeg")
@@ -246,7 +247,5 @@ an$write(force = TRUE)
 #   white_around_sticker = FALSE,
 #   asp = 1
 # )
-
-quarto::quarto_render(input = "./README.qmd")
 
 # nolint end

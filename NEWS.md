@@ -1,5 +1,36 @@
 # DIZtools NEWS
 
+## Unreleased (2023-04-06)
+
+#### Docs
+
+-   added trailing dot to title text
+    ([eadcb9f](https://gitlab.miracum.org/miracum/misc/diztools/tree/eadcb9fa3df0dfd41de1fa25158d4f0956376404))
+-   added brackets to function names in readme
+    ([2deff0d](https://gitlab.miracum.org/miracum/misc/diztools/tree/2deff0d5e34cb58d9a3139304d8a13b5df66a6a1))
+-   corrected warning message text
+    ([ff7ba4c](https://gitlab.miracum.org/miracum/misc/diztools/tree/ff7ba4c597914bcc18a9ba090cb74e1a220a5d42))
+-   updated readme and title of several functions
+    ([29327d9](https://gitlab.miracum.org/miracum/misc/diztools/tree/29327d9e3656b13fd3db73a1cd7a52ee774cd762))
+-   updated README with `README.Rmd`
+    ([760c6eb](https://gitlab.miracum.org/miracum/misc/diztools/tree/760c6eb149edf132421cd4a6d8fd34e18196972f))
+-   added link to `time_diff_print()` function
+    ([3211301](https://gitlab.miracum.org/miracum/misc/diztools/tree/321130108c44ddc24b0b5c0b88b2330091840be4))
+
+#### Other changes
+
+-   re-added readme.md
+    ([eb9ef06](https://gitlab.miracum.org/miracum/misc/diztools/tree/eb9ef0668f84451d5584217618781a600f3fd1bc))
+-   moved from `README.Rmd` (R Markdown) to `README.qmd` (Quarto)
+    ([8020012](https://gitlab.miracum.org/miracum/misc/diztools/tree/8020012b59cc8839220d8033116992668499bbd7))
+-   updated readme
+    ([8e767b7](https://gitlab.miracum.org/miracum/misc/diztools/tree/8e767b71171ecae066ec7f6869f9b52426af2030))
+-   updated news.md
+    ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
+
+Full set of changes:
+[`v0.0.8...eadcb9f`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...eadcb9f)
+
 ## v0.0.8 (2023-03-16)
 
 #### New features
