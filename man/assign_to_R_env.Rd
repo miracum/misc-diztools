@@ -2,7 +2,7 @@
 % Please edit documentation in R/assign_to_R_env.R
 \name{assign_to_R_env}
 \alias{assign_to_R_env}
-\title{assign_to_R_env}
+\title{Add variable to R environment (in contrast to system environment).}
 \usage{
 assign_to_R_env(key, val, pos = 1)
 }

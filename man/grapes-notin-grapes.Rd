@@ -2,7 +2,7 @@
 % Please edit documentation in R/notin.R
 \name{\%notin\%}
 \alias{\%notin\%}
-\title{notin helper function}
+\title{notin helper function. Opposite of `in` function.}
 \usage{
 x \%notin\% y
 }

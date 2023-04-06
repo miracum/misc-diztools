@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title assign_to_R_env
+#' @title Add variable to R environment (in contrast to system environment).
 #' @description Hack variable into global env (bypasses R CMD checks).
 #'   This does create a new variable in the R environment but NOT a new
 #'   variable in the system environment. To create a system environment

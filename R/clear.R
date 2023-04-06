@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Clean the console and environment-variables
+#' @title Clean the console and environment-variables.
 #'
 #' @description Function to clean the local environment.
 #'   The call of this function clears the console and the local environment

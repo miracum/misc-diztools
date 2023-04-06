@@ -14,8 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title Converts the first letter of the input string to uppercase
-#' @description Converts the first letter of the input string to uppercase
+#' @title Converts the first letter of the input string to uppercase.
+#' @description Converts the first letter of the input string to uppercase.
 #'
 #' @param x A character string. E.g. "hello world" will become "Hello world".
 #' @return Returns the input string but with a capital first letter.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/firstup.R
 \name{firstup}
 \alias{firstup}
-\title{Converts the first letter of the input string to uppercase}
+\title{Converts the first letter of the input string to uppercase.}
 \usage{
 firstup(x)
 }
@@ -13,7 +13,7 @@ firstup(x)
 Returns the input string but with a capital first letter.
 }
 \description{
-Converts the first letter of the input string to uppercase
+Converts the first letter of the input string to uppercase.
 }
 \examples{
 {

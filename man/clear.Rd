@@ -2,7 +2,7 @@
 % Please edit documentation in R/clear.R
 \name{clear}
 \alias{clear}
-\title{Clean the console and environment-variables}
+\title{Clean the console and environment-variables.}
 \usage{
 clear(keep_environment = FALSE, keep_console = FALSE)
 }

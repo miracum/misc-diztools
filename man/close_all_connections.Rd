@@ -2,7 +2,7 @@
 % Please edit documentation in R/close_all_connections.R
 \name{close_all_connections}
 \alias{close_all_connections}
-\title{Unset/close all open connections}
+\title{Unset/close all open connections.}
 \usage{
 close_all_connections()
 }

@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#' @title notin helper function
+#' @title notin helper function. Opposite of `in` function.
 #'
 #' @description Function to return elements of x that are not in y.
 #'
