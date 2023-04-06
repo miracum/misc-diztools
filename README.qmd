@@ -104,7 +104,7 @@ get_function_string <- function(files, texts){
              replacement = "",
              x = _
            ),
-           "`](./R/",
+           "()`](./R/",
            files,
            ")",
            texts
@@ -116,6 +116,8 @@ get_function_string <- function(files, texts){
 `r get_function_string(files = files[external_function_ids], texts = texts[external_function_ids])`
 
 ## Internal functions
+
+:bulb: Use with care. Can be used by typing `DIZtools:::internal_function_name()` (<- using three `:`). Not recommended.
 
 `r get_function_string(files = files[internal_function_ids], texts = texts[internal_function_ids])`
 
