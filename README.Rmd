@@ -31,19 +31,23 @@ The R package `DIZtools` provides utility functions used for the R package devel
 
 You can install `DIZtools` directly from CRAN:
 
-````{verbatim}
+````{verbatim, lang = "markdown"}
+
 ```r
 install.packages("DIZtools")
 ```
+
 ````
 
 The development version can be installed using
 
-````{verbatim}
+````{verbatim, lang = "markdown"}
+
 ```r
 install.packages("remotes")
 remotes::install_github("miracum/misc-diztools", ref = "dev")
 ```
+
 ````
 
 ## Contained functions
