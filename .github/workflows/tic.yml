@@ -96,7 +96,7 @@ jobs:
 
       - name: "[Stage] [Linux] Install curl"
         if: runner.os == 'Linux'
-        run: sudo apt install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
+        run: sudo apt install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libssh2-1-dev
 
       - name: "[Stage] Configure R Java"
         if: runner.os != 'Windows' && matrix.config.java == 'true'
