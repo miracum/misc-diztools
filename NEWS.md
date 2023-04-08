@@ -19,6 +19,8 @@
 
 #### Other changes
 
+-   moved quarto generation of readme up in devstuffs
+    ([e5d9cb4](https://gitlab.miracum.org/miracum/misc/diztools/tree/e5d9cb4f44ea2a22994b2dab14c7a0ee78c2e7b1))
 -   re-added readme.md
     ([eb9ef06](https://gitlab.miracum.org/miracum/misc/diztools/tree/eb9ef0668f84451d5584217618781a600f3fd1bc))
 -   moved from `README.Rmd` (R Markdown) to `README.qmd` (Quarto)
@@ -29,7 +31,7 @@
     ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
 
 Full set of changes:
-[`v0.0.8...eadcb9f`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...eadcb9f)
+[`v0.0.8...e5d9cb4`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...e5d9cb4)
 
 ## v0.0.8 (2023-03-16)
 
