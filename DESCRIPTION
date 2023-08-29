@@ -1,6 +1,6 @@
 Package: DIZtools
 Title: Lightweight Utilities for 'DIZ' R Package Development
-Version: 0.0.8.9003
+Version: 1.0.0
 Date: 2023-08-29
 Authors@R: c(
     person("Jonathan M.", "Mang", , "jonathan.mang@uk-erlangen.de", role = c("aut", "cre"),

@@ -1,6 +1,11 @@
 # DIZtools NEWS
 
-## Unreleased (2023-04-08)
+## Unreleased (2023-08-29)
+
+#### New features
+
+-   adds function `dt_row_to_string()`
+    ([c76b9a9](https://gitlab.miracum.org/miracum/misc/diztools/tree/c76b9a90593f24dc6e1693eedeffb1677fe1c492))
 
 #### CI
 
@@ -38,7 +43,7 @@
     ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
 
 Full set of changes:
-[`v0.0.8...d6bdfe7`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...d6bdfe7)
+[`v0.0.8...c76b9a9`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...c76b9a9)
 
 ## v0.0.8 (2023-03-16)
 
