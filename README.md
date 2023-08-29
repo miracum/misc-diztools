@@ -62,6 +62,8 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
     environment-variables.
 -   [`close_all_connections()`](./R/close_all_connections.R):
     Unset/close all open connections.
+-   [`dt_row_to_string()`](./R/dt_row_to_string.R): Get the content of a
+    data.table row in print-ready format.
 -   [`equals2()`](./R/equals2.R): Robust compare two elements and return
     true if both elements are the same. False otherwise. No `NA` or
     `NULL`.

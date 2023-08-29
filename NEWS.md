@@ -1,6 +1,11 @@
 # DIZtools NEWS
 
-## Unreleased (2023-04-06)
+## Unreleased (2023-04-08)
+
+#### CI
+
+-   trying to fix \#1 in github
+    ([498ee3e](https://gitlab.miracum.org/miracum/misc/diztools/tree/498ee3e5375b7afb2b1ad4f143434b5fdfc7d29d))
 
 #### Docs
 
@@ -19,6 +24,8 @@
 
 #### Other changes
 
+-   updated description
+    ([d6bdfe7](https://gitlab.miracum.org/miracum/misc/diztools/tree/d6bdfe79dab9ebee100dfbbf4407827ddf894401))
 -   moved quarto generation of readme up in devstuffs
     ([e5d9cb4](https://gitlab.miracum.org/miracum/misc/diztools/tree/e5d9cb4f44ea2a22994b2dab14c7a0ee78c2e7b1))
 -   re-added readme.md
@@ -31,7 +38,7 @@
     ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
 
 Full set of changes:
-[`v0.0.8...e5d9cb4`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...e5d9cb4)
+[`v0.0.8...d6bdfe7`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...d6bdfe7)
 
 ## v0.0.8 (2023-03-16)
 
