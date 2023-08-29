@@ -34,7 +34,7 @@ my_desc$set_authors(c(
 my_desc$del("Maintainer")
 my_desc$del("LazyData")
 # Set the version
-my_desc$set_version("0.0.8.9003")
+my_desc$set_version("1.0.0")
 # The title of your package
 my_desc$set(Title = "Lightweight Utilities for 'DIZ' R Package Development")
 # The description of your package
@@ -135,7 +135,7 @@ usethis::use_build_ignore("tic.R")
 usethis::use_build_ignore(".github")
 usethis::use_build_ignore("cran-comments.md")
 usethis::use_build_ignore("logfile.log")
-usethis::use_build_ignore("NEWS.md")
+# usethis::use_build_ignore("NEWS.md")
 usethis::use_build_ignore("README.qmd")
 usethis::use_build_ignore("CRAN-RELEASE")
 usethis::use_build_ignore("CRAN-SUBMISSION")

@@ -12,7 +12,6 @@
 ^\.github$
 ^cran-comments\.md$
 ^logfile\.log$
-^NEWS\.md$
 ^README\.qmd$
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
