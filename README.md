@@ -89,6 +89,8 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
 -   [`number_to_position()`](./R/number_to_position.R): Converts an
     integer number to its “verbal position”. 1 –\> “1st”, 2 –\> “2nd”, 3
     –\> “3rd”, 4 –\> “4th”, …
+-   [`paste_pct_sum()`](./R/paste_pct_sum.R): Get the percentage of two
+    values pretty formatted.
 -   [`paste2()`](./R/paste2.R): Normal `paste` function with additional
     `collapse_last` argument.
 -   [`pretty_timestamp()`](./R/pretty_timestamp.R): Quickly get a pretty

@@ -1,6 +1,7 @@
+
 # DIZtools NEWS
 
-## Unreleased (2023-08-29)
+## v1.0.0 (2023-08-29)
 
 #### New features
 
@@ -9,7 +10,7 @@
 
 #### CI
 
--   trying to fix \#1 in github
+-   trying to fix #1 in github
     ([498ee3e](https://gitlab.miracum.org/miracum/misc/diztools/tree/498ee3e5375b7afb2b1ad4f143434b5fdfc7d29d))
 
 #### Docs
@@ -29,6 +30,8 @@
 
 #### Other changes
 
+-   manually updated news.md due to moved urls
+    ([e950968](https://gitlab.miracum.org/miracum/misc/diztools/tree/e950968000fcc98d8e809eb558ab8075466f0f93))
 -   preparing new release `1.0.0`
     ([b07f724](https://gitlab.miracum.org/miracum/misc/diztools/tree/b07f7240676307af6a6a627006f962f3fa26a4d6))
 -   removed NEWS.md from buildignore since it is supported by CRAN now
@@ -47,7 +50,7 @@
     ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
 
 Full set of changes:
-[`v0.0.8...b07f724`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.8...b07f724)
+[`v0.0.8...v1.0.0`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.8...v1.0.0)
 
 ## v0.0.8 (2023-03-16)
 
@@ -188,7 +191,7 @@ Full set of changes:
 
 -   `is.empty()` can now handle lists in lists
     ([41a2ba7](https://gitlab.miracum.org/miracum/misc/diztools/tree/41a2ba7ed1add31bea23c79d6f0f382cf8a4551f))
--   importing data.table now for check\_if\_unique\_rows
+-   importing data.table now for check_if_unique_rows
     ([c0f8b69](https://gitlab.miracum.org/miracum/misc/diztools/tree/c0f8b692090a7a40bb50d8024582e891aeb5aea4))
 -   feedback function broke after calling `close_all_connections()`
     ([9938688](https://gitlab.miracum.org/miracum/misc/diztools/tree/9938688448a29e3a423d1c0afbb260357cd926c4))
@@ -245,7 +248,7 @@ Full set of changes:
 
 #### CI
 
--   updated http –&gt; https
+-   updated http –\> https
     ([2c321ed](https://gitlab.miracum.org/miracum/misc/diztools/tree/2c321ed1bd41598b219afdb4a0b99e0e5078fd98))
 
 #### Docs
@@ -314,7 +317,7 @@ Full set of changes:
 
 -   example errors and cran check corrections
     ([7deca15](https://gitlab.miracum.org/miracum/misc/diztools/tree/7deca15fddb203a0776f0328d396e32c69fa73eb))
--   mustwork=FALSE to clean\_path
+-   mustwork=FALSE to clean_path
     ([bee0484](https://gitlab.miracum.org/miracum/misc/diztools/tree/bee0484d69403eb619ac980226da93915593360d))
 -   fixed some missing docs; cran checks should work now
     ([66150e9](https://gitlab.miracum.org/miracum/misc/diztools/tree/66150e92c39e02485b619a6ba3d4c4c7a701d2ca))
