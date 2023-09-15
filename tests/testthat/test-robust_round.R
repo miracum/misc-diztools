@@ -67,7 +67,7 @@ test_that(desc = "Test `robust_round()`",
                 thousands_separator = ".",
                 decimal_separator = ","
               ),
-              expected = c("4.897,123", "<0.001")
+              expected = c("4.897,123", "<0,001")
             )
 
           })
