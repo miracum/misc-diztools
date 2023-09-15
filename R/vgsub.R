@@ -28,8 +28,13 @@
 #' @source \href{https://github.com/Rapporter/rapportools/blob/master/R/utils.R}{Copied from package `rapportools`}
 #' @export
 vgsub <- function(pattern, replacement, x, ...) {
+  one_pattern <- length(pattern) == 1
+
   for (i in 1:length(pattern)) {
-    x <- gsub(pattern[i], replacement[i], x, ...)
+    x <- gsub(ifelse(one_pattern, pattern, pattern[i]),
+              replacement[i],
+              x,
+              ...)
   }
   return(x)
 }
