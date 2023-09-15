@@ -94,7 +94,7 @@ robust_round <- function(x,
       } else {
         return(x)
       }
-    }))
+    }) |> unname())
   }
 
   return(res)
