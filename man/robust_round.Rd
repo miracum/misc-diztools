@@ -4,7 +4,13 @@
 \alias{robust_round}
 \title{Round numbers without problems.}
 \usage{
-robust_round(x, digits = 2, thousands_separator = "", decimal_separator = ".")
+robust_round(
+  x,
+  digits = 2,
+  thousands_separator = "",
+  decimal_separator = ".",
+  lower_indicator = TRUE
+)
 }
 \arguments{
 \item{x}{(numeric) The numeric input vector to round.}
@@ -17,6 +23,12 @@ decimals before the decimal point.}
 
 \item{decimal_separator}{(string, optional) The character to be used to
 indicate the numeric decimal point.}
+
+\item{lower_indicator}{(Boolaen, optional, default = TRUE) If the result is
+(since it is rounded) zero: Should there be displayed a lower-indicator?
+E.g. \code{DIZtools::robust_round(0.00001)} results internally in "0.00".
+The more intuitive result therefore would be "<0.01", which can be enabled
+using the parameter `lower_indicator == TRUE`.}
 }
 \value{
 Rounded numbers as string.

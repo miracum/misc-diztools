@@ -60,5 +60,14 @@ test_that(desc = "Test `robust_round()`",
               expected = c("123.456,988", "123.456,123")
             )
 
+            expect_equal(
+              object = robust_round(
+                x = c(4897.1233, 0e-12),
+                digits = 3,
+                thousands_separator = ".",
+                decimal_separator = ","
+              ),
+              expected = c("4.897,123", "<0.001")
+            )
 
           })
