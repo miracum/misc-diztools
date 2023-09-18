@@ -56,7 +56,7 @@
     ([7116495](https://gitlab.miracum.org/miracum/misc/diztools/tree/71164954057a66b1a36f6ffb68638653cc5baf2f))
 
 Full set of changes:
-[`v0.0.8...v1.0.0`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.8...v1.0.0)
+[`v0.0.8...v1.0.0`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.8...v1.0.0)
 
 ## v0.0.8 (2023-03-16)
 
@@ -95,7 +95,7 @@ Full set of changes:
     ([371b107](https://gitlab.miracum.org/miracum/misc/diztools/tree/371b1076f2a110e65ec4f9aff96b0947f4999cc4))
 
 Full set of changes:
-[`v0.0.7...v0.0.8`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.7...v0.0.8)
+[`v0.0.7...v0.0.8`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.7...v0.0.8)
 
 ## v0.0.7 (2023-01-23)
 
@@ -117,7 +117,7 @@ Full set of changes:
     ([3ce25e0](https://gitlab.miracum.org/miracum/misc/diztools/tree/3ce25e0853f9133602a09a13ff7eed649a9ecad6))
 
 Full set of changes:
-[`v0.0.6...v0.0.7`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.6...v0.0.7)
+[`v0.0.6...v0.0.7`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.6...v0.0.7)
 
 ## v0.0.6 (2022-11-21)
 
@@ -182,7 +182,7 @@ Full set of changes:
     ([1106ff6](https://gitlab.miracum.org/miracum/misc/diztools/tree/1106ff6ce31297ec014c8aa45d31273a291fc38d))
 
 Full set of changes:
-[`v0.0.5...v0.0.6`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.5...v0.0.6)
+[`v0.0.5...v0.0.6`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.5...v0.0.6)
 
 ## v0.0.5 (2022-05-18)
 
@@ -236,7 +236,7 @@ Full set of changes:
     ([c40e2fb](https://gitlab.miracum.org/miracum/misc/diztools/tree/c40e2fb7828a5b6bbb5053f16bdf748654e07d65))
 
 Full set of changes:
-[`v0.0.4...v0.0.5`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.4...v0.0.5)
+[`v0.0.4...v0.0.5`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.4...v0.0.5)
 
 ## v0.0.4 (2022-03-03)
 
@@ -270,7 +270,7 @@ Full set of changes:
     ([9661f74](https://gitlab.miracum.org/miracum/misc/diztools/tree/9661f7465fd23c5fb3b89539970f8707c3b203ab))
 
 Full set of changes:
-[`v0.0.3...v0.0.4`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.3...v0.0.4)
+[`v0.0.3...v0.0.4`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.3...v0.0.4)
 
 ## v0.0.3 (2022-02-24)
 
@@ -294,7 +294,7 @@ Full set of changes:
     ([a247e7e](https://gitlab.miracum.org/miracum/misc/diztools/tree/a247e7e09e023aa2d142c8f82439ee4535a2043c))
 
 Full set of changes:
-[`v0.0.2...v0.0.3`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.2...v0.0.3)
+[`v0.0.2...v0.0.3`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.2...v0.0.3)
 
 ## v0.0.2 (2022-02-08)
 
@@ -306,7 +306,7 @@ Full set of changes:
     ([64ff26e](https://gitlab.miracum.org/miracum/misc/diztools/tree/64ff26e8570f2464959def7f2795b9ec15888926))
 
 Full set of changes:
-[`v0.0.1...v0.0.2`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v0.0.1...v0.0.2)
+[`v0.0.1...v0.0.2`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/v0.0.1...v0.0.2)
 
 ## v0.0.1 (2022-02-07)
 
@@ -389,4 +389,4 @@ Full set of changes:
     ([6aa0e50](https://gitlab.miracum.org/miracum/misc/diztools/tree/6aa0e5086d602f236abaff33906cd433db8c1519))
 
 Full set of changes:
-[`6aa0e50...v0.0.1`](https://gitlab.miracum.org/miracum/misc/diztools/compare/6aa0e50...v0.0.1)
+[`6aa0e50...v0.0.1`](https://gitlab.miracum.org/miracum/misc/diztools/-/compare/6aa0e50...v0.0.1)
