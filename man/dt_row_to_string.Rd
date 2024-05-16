@@ -15,7 +15,8 @@ dt_row_to_string(dt, row = 1, sep = ", ", collapse = ": ", quote = "'")
     \code{\link[base]{NA_character_}}.}
 
 \item{collapse}{an optional character string to separate the results.  Not
-    \code{\link[base]{NA_character_}}.}
+    \code{\link[base]{NA_character_}}.  When \code{collapse} is a string,
+    the result is always a string (\code{\link[base]{character}} of length 1).}
 
 \item{quote}{(character, Optional) A quote parameter to be applied
 to all values of the rows.}

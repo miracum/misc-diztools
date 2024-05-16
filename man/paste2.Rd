@@ -10,7 +10,8 @@ paste2(..., collapse = NULL, collapse_last = NULL, sep = " ", recycle0 = FALSE)
 \item{...}{one or more \R objects, to be converted to character vectors.}
 
 \item{collapse}{an optional character string to separate the results.  Not
-    \code{\link[base]{NA_character_}}.}
+    \code{\link[base]{NA_character_}}.  When \code{collapse} is a string,
+    the result is always a string (\code{\link[base]{character}} of length 1).}
 
 \item{collapse_last}{(string, optional) The string to use for the last
 instance while collapsing. All other elements will be pasted using
@@ -21,10 +22,10 @@ will be ignored.}
     \code{\link[base]{NA_character_}}.}
 
 \item{recycle0}{\code{\link[base]{logical}} indicating if zero-length
-    character arguments should lead to the zero-length
-    \code{\link[base]{character}(0)} after the \code{sep}-phase (which turns into
-    \code{""} in the \code{collapse}-phase, i.e., when \code{collapse} is
-    not \code{NULL}).}
+    character arguments should result in the zero-length
+    \code{\link[base]{character}(0)}.  Note that when \code{collapse} is
+    a string, \code{recycle0} does \emph{not} recycle to zero-length, but
+    to \code{""}.}
 }
 \value{
 String. See`?paste` for details.
