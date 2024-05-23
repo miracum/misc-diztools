@@ -1,5 +1,5 @@
 ---
-format: markdown_github
+format: gfm
 editor_options: 
   chunk_output_type: console
 ---

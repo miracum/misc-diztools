@@ -1,5 +1,20 @@
 # DIZtools NEWS
 
+## Unreleased (2024-05-16)
+
+#### CI
+
+-   fixing ci
+    ([72d5242](https://gitlab.miracum.org/miracum/misc/diztools/tree/72d524209d6dc5dddaee36ae7961d995ea06945e))
+
+#### Other changes
+
+-   updated desc file
+    ([6756010](https://gitlab.miracum.org/miracum/misc/diztools/tree/67560108384cd7b622f55bd422ee5a5dfeaec6b1))
+
+Full set of changes:
+[`v1.0.1...6756010`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v1.0.1...6756010)
+
 ## v1.0.1 (2023-09-18)
 
 #### New features
