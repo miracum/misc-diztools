@@ -1,6 +1,11 @@
 # DIZtools NEWS
 
-## Unreleased (2024-05-16)
+## Unreleased (2024-05-23)
+
+#### Bug fixes
+
+-   updated files and fixed lintr config
+    ([102ca91](https://gitlab.miracum.org/miracum/misc/diztools/tree/102ca916e0ab258f820b121108705194f4a8ff6b))
 
 #### CI
 
@@ -13,7 +18,7 @@
     ([6756010](https://gitlab.miracum.org/miracum/misc/diztools/tree/67560108384cd7b622f55bd422ee5a5dfeaec6b1))
 
 Full set of changes:
-[`v1.0.1...6756010`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v1.0.1...6756010)
+[`v1.0.1...102ca91`](https://gitlab.miracum.org/miracum/misc/diztools/compare/v1.0.1...102ca91)
 
 ## v1.0.1 (2023-09-18)
 

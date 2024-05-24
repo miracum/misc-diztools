@@ -221,10 +221,6 @@ an <- autonewsmd::autonewsmd$new(repo_name = packagename)
 an$generate()
 an$write(force = TRUE)
 
-badger::badge_cran_download("DIZtools", "grand-total", "blue")
-badger::badge_cran_download("DIZtools", "last-month", "blue")
-badger::badge_dependencies("DIZtools")
-
 #
 # imgurl <- path.expand("~/development/Rpackages/bg1.jpeg")
 # hexSticker::sticker(
