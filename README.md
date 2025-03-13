@@ -1,8 +1,11 @@
 
 
 <!-- !!! ############################################################ !!! -->
+
 <!-- This page is auto generated from `README.qmd`. -->
+
 <!-- Don't change the .md file manually! -->
+
 <!-- !!! ############################################################ !!! -->
 
 # DIZtools <img src="man/figures/logo.png" align="right" width="120" />
@@ -22,8 +25,7 @@ status](https://github.com/miracum/misc-diztools/workflows/R%20CMD%20Check%20via
 status](https://github.com/miracum/misc-diztools/workflows/lint/badge.svg)](https://github.com/miracum/misc-diztools/actions)
 [![R build
 status](https://github.com/miracum/misc-diztools/workflows/test-coverage/badge.svg)](https://github.com/miracum/misc-diztools/actions)
-[![](https://codecov.io/gh/https://github.com/miracum/misc-diztools/branch/main/graph/badge.svg)](https://codecov.io/gh/https://github.com/miracum/misc-diztools)
-
+[![](https://codecov.io/gh/https://github.com/miracum/misc-diztools/branch/main/graph/badge.svg)](https://app.codecov.io/gh/https://github.com/miracum/misc-diztools)
 <!-- badges: end -->
 
 The R package `DIZtools` provides utility functions used for the R
@@ -57,6 +59,8 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
 
 - [`assign_to_R_env()`](./R/assign_to_R_env.R): Add variable to R
   environment (in contrast to system environment).
+- [`check_digit()`](./R/check_digit.R): Calculate Check Digit Using
+  DIN/ISO 7064, Mod 11,10
 - [`check_if_unique_rows()`](./R/check_if_unique_rows.R): Takes a
   data.table dataset and checks if for each unique element in a
   specified column there is exaclty one row.
