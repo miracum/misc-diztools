@@ -71,7 +71,7 @@ is.empty <- function(x, trim = TRUE, all = FALSE, ...) {
       return(TRUE)
     }
     return(FALSE)
-  } else{
+  } else {
     if (isTRUE(all)) {
       all(unlist(sapply(
         x, is.empty, trim = trim, all = all, ...

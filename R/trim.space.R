@@ -30,19 +30,19 @@
 #' @export
 trim.space <-
   function(x,
-           what = c('both', 'leading', 'trailing', 'none'),
-           space.regex = '[:space:]',
+           what = c("both", "leading", "trailing", "none"),
+           space.regex = "[:space:]",
            ...) {
     if (missing(x))
-      stop('nothing to trim spaces to =(')
+      stop("nothing to trim spaces to =(")
     re <- switch(
       match.arg(what),
-      both     = sprintf('^[%s]+|[%s]+$', space.regex, space.regex),
-      leading  = sprintf('^[%s]+', space.regex),
-      trailing = sprintf('[%s]+$', space.regex),
+      both     = sprintf("^[%s]+|[%s]+$", space.regex, space.regex),
+      leading  = sprintf("^[%s]+", space.regex),
+      trailing = sprintf("[%s]+$", space.regex),
       none     = {
         return(x)
       }
     )
-    vgsub(re, '', x, ...)
+    vgsub(re, "", x, ...)
   }
