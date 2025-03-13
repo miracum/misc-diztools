@@ -22,7 +22,7 @@
 #'
 file_lines_to_list = function(filepath) {
   nr_of_lines <- R.utils::countLines(filepath)
-  con_input = file(filepath, "r")
+  con_input <- file(filepath, "r")
 
   res <- vector("list", length = nr_of_lines)
 

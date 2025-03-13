@@ -59,8 +59,8 @@ Create string with time difference in suitable unit.
   in an iteration process, or the estimated time of arrival by just
   providing the current and total iteration step(s).
   A more fancy option might be the package
-  \href{https://github.com/HenrikBengtsson/progressr}{progressr}.
-  See \href{https://github.com/HenrikBengtsson/future.apply/issues/34#issuecomment-549011124}{progressr}
+  \href{https://github.com/futureverse/progressr}{progressr}.
+  See \href{https://github.com/futureverse/future.apply/issues/34#issuecomment-549011124}{progressr}
   for a corresponding code snippet.
 }
 \examples{
