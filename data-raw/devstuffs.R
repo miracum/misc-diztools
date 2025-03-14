@@ -82,7 +82,7 @@ my_desc$write(file = "DESCRIPTION")
 
 
 # Depends
-usethis::use_package("R", min_version = "3.1.0", type = "Depends")
+usethis::use_package("R", min_version = "4.1.0", type = "Depends")
 
 ## Imports
 ## For `get_config()`:
