@@ -12,11 +12,6 @@
 
 <!-- badges: start -->
 
-    Warning: `git_branch_default()` was deprecated in usethis 2.1.0.
-    ℹ Please use `git_default_branch()` instead.
-    ℹ The deprecated feature was likely used in the badger package.
-      Please report the issue at <https://github.com/GuangchuangYu/badger/issues>.
-
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://www.r-pkg.org/badges/version/DIZtools)](https://cran.r-project.org/package=DIZtools)
 [![CRAN
@@ -91,6 +86,8 @@ remotes::install_github("miracum/misc-diztools", ref = "dev")
   return the value for a given key.
 - [`get_current_timestamp()`](./R/get_current_timestamp.R): Quickly get
   the current time stamp without the need to handle format-options etc.
+- [`get_package_names()`](./R/get_package_names.R): Get used package
+  names from R/qmd-files.
 - [`is_date_format()`](./R/is_date_format.R): Checks if a string matches
   a given date format.
 - [`is.empty()`](./R/is.empty.R): Check for empty/`NA`/`NULL`/`NaN`/etc.
