@@ -38,9 +38,10 @@ E.g. for publication purposes it might be useful to
   package names if they are used in the manner "packagename::function()".
 }
 \examples{
+\dontrun{
 paths <- c("~", "/path/to/project/R")
 get_package_names(
   paths = paths
 )
-
+}
 }

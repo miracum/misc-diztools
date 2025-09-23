@@ -35,11 +35,12 @@
 #'
 #' @return A vector of all found package names.
 #' @examples
+#' \dontrun{
 #' paths <- c("~", "/path/to/project/R")
 #' get_package_names(
 #'   paths = paths
 #' )
-#'
+#' }
 #' @export
 #'
 get_package_names <- function(paths = c("."),
